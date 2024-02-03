@@ -16,7 +16,7 @@ export default function App() {
           {/* <Nav /> */}
           <Suspense>
             <MetaProvider>
-              <div class="max-w-5xl m-auto my-8 sm:mt-16 text-lg p-4 sm:p-0 text-left">
+              <div class="max-w-5xl m-auto my-8 sm:mt-16 text-lg p-4 text-left">
                 <Nav />
                 {props.children}
               </div>
