@@ -27,7 +27,9 @@ export default function Project() {
           <div>January 2023 - October 2023</div>
         </div>
         <div class="flex">
-          <Link href="https://payshare.gg">PayShare.gg</Link>
+          <Link href="https://payshare.gg" external>
+            PayShare.gg
+          </Link>
           <div class="text-slate-500 pl-2">- Owner and Creator</div>
         </div>
 
