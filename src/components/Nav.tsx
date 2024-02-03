@@ -25,7 +25,7 @@ export default function Nav() {
         </li>
         |
         <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-          <Link href="https://twitter.com/athammer_" defaultBlack external>
+          <Link href="https://twitter.com/ahammer_dev" defaultBlack external>
             Twitter
           </Link>
         </li>

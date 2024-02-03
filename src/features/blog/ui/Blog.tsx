@@ -1,4 +1,3 @@
-import { A } from "@solidjs/router";
 import { Link } from "~/components/Link";
 
 export default function Blog() {
