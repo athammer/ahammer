@@ -6,5 +6,5 @@ type CodeBlockProps = {
 };
 export const CodeBlock = (props: CodeBlockProps) => {
   const [html] = createResource([props.code], convertCodeString);
-  return <div class="w-fit" innerHTML={html.latest} />;
+  return <div class="w-fit my-2" innerHTML={html.latest} />;
 };

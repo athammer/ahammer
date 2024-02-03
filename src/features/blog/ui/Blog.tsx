@@ -20,7 +20,7 @@ export default function Blog() {
           </div>
         </Link>
         <Link
-          href="/blog/deploying-static-solid-start-5.x-to-cloudflare"
+          href="/blog/fix-for-deploying-static-solid-start-5.x-to-cloudflare-pages"
           defaultBlack
         >
           <div class="flex gap-4 border-b-2 py-2 hover:bg-slate-100">
