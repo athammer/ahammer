@@ -15,7 +15,7 @@ export default function Blog() {
           defaultBlack
         >
           <div class="flex gap-4 border-b-2 py-2 hover:bg-slate-100">
-            <div class="min-w-14">2023</div>
+            <div class="min-w-14">2024</div>
             <h3>Setting up Square Payment Links the Stripe Alternative</h3>
           </div>
         </Link>
@@ -25,7 +25,7 @@ export default function Blog() {
         >
           <div class="flex gap-4 border-b-2 py-2 hover:bg-slate-100">
             <div class="min-w-14"></div>
-            <h3>Deploying Solid Start 5.x to Cloudflare</h3>
+            <h3>Deploying SolidStart 5.x to Cloudflare</h3>
           </div>
         </Link>
       </div>
