@@ -13,13 +13,13 @@ export default function Nav() {
     <nav class="mb-8">
       <ul class="container flex items-center pr-3 font-semibold">
         <li class={`border-b-2 ${active("/")} mr-1.5 sm:mr-6`}>
-          <Link href="/" defaultBlack external>
+          <Link href="/" defaultBlack>
             Home
           </Link>
         </li>
         |
         <li class={`border-b-2 ${active("/blog")} mx-1.5 sm:mx-6`}>
-          <Link href={randomBlog()} defaultBlack external>
+          <Link href={randomBlog()} defaultBlack>
             Random Blog
           </Link>
         </li>
