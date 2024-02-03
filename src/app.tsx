@@ -13,7 +13,7 @@ export default function App() {
         <>
           {/* <Nav /> */}
           <Suspense>
-            <div class="max-w-5xl m-auto mt-4 sm:mt-16 text-lg text-left">
+            <div class="max-w-5xl m-auto my-8 sm:mt-16 text-lg text-left">
               <Nav />
               {props.children}
             </div>
