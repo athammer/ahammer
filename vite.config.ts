@@ -8,6 +8,5 @@ export default defineConfig({
         crawlLinks: true,
       },
     },
-    ssr: true,
   },
 });

@@ -1,6 +1,8 @@
+import { Link } from "~/components/Link";
+
 export default function Project() {
   return (
-    <div>
+    <section>
       <h2 class="text-2xl font-bold uppercase">Projects</h2>
       <div class="mb-4">
         <div class="flex place-content-between">
@@ -8,9 +10,7 @@ export default function Project() {
           <div>October 2023 - Present</div>
         </div>
         <div class="flex">
-          <a href="#" target="_blank" class="text-sky-600 hover:underline">
-            To be released
-          </a>
+          <Link href="#">To be released</Link>
           <div class="text-slate-500 pl-2">- Owner and Creator</div>
         </div>
 
@@ -27,13 +27,7 @@ export default function Project() {
           <div>January 2023 - October 2023</div>
         </div>
         <div class="flex">
-          <a
-            href="https://payshare.gg"
-            target="_blank"
-            class="text-sky-600 hover:underline"
-          >
-            PayShare.gg
-          </a>
+          <Link href="https://payshare.gg">PayShare.gg</Link>
           <div class="text-slate-500 pl-2">- Owner and Creator</div>
         </div>
 
@@ -45,6 +39,6 @@ export default function Project() {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 }

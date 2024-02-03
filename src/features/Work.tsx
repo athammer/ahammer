@@ -1,6 +1,6 @@
 export default function Work() {
   return (
-    <div class="mb-8">
+    <section class="mb-8">
       <h2 class="text-2xl font-bold uppercase">Work Experience</h2>
       <div class="mb-4">
         <div class="flex place-content-between">
@@ -132,6 +132,6 @@ export default function Work() {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 }

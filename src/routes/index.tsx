@@ -7,7 +7,7 @@ import Project from "~/features/Project";
 
 export default function Home() {
   return (
-    <main class="mx-auto text-gray-700">
+    <main class="mx-auto text-gray-800">
       <div>
         <Title />
         <Blog />

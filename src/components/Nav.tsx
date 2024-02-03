@@ -1,5 +1,6 @@
 import { A, useLocation } from "@solidjs/router";
 import { randomBlog } from "~/features/blog/random-blog";
+import { Link } from "~/components/Link";
 
 export default function Nav() {
   const location = useLocation();
@@ -12,29 +13,33 @@ export default function Nav() {
     <nav class="mb-8">
       <ul class="container flex items-center pr-3 font-semibold">
         <li class={`border-b-2 ${active("/")} mr-1.5 sm:mr-6`}>
-          <A href="/blog">Home</A>
+          <Link href="/blog" defaultBlack>
+            Home
+          </Link>
         </li>
         |
         <li class={`border-b-2 ${active("/blog")} mx-1.5 sm:mx-6`}>
-          <A href={randomBlog()}>Random Blog</A>
+          <Link href={randomBlog()} defaultBlack>
+            Random Blog
+          </Link>
         </li>
         |
         <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-          <a href="https://twitter.com/athammer_" target="_blank">
+          <Link href="https://twitter.com/athammer_" defaultBlack>
             Twitter
-          </a>
+          </Link>
         </li>
         |
         <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-          <a href="https://www.linkedin.com/in/athammer/" target="_blank">
+          <Link href="https://www.linkedin.com/in/athammer/" defaultBlack>
             Linkedin
-          </a>
+          </Link>
         </li>
         |
         <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-          <a href="https://github.com/athammer" target="_blank">
+          <Link href="https://github.com/athammer" defaultBlack>
             Github
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
