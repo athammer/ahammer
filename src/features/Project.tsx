@@ -6,7 +6,7 @@ export default function Project() {
       <h2 class="text-2xl font-bold uppercase">Projects</h2>
       <div class="mb-4">
         <div class="flex place-content-between">
-          <h3 class="font-semibold ">CheapGames</h3>
+          <h3 class="font-semibold pr-2">CheapGames</h3>
           <div class="text-slate-500">October 2023 - Present</div>
         </div>
         <div class="flex">
@@ -23,7 +23,7 @@ export default function Project() {
       </div>
       <div class="mb-4">
         <div class="flex place-content-between">
-          <h3 class="font-semibold ">PayShare</h3>
+          <h3 class="font-semibold pr-2">PayShare</h3>
           <div class="text-slate-500">January 2023 - October 2023</div>
         </div>
         <div class="flex">
