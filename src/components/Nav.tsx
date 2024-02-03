@@ -11,7 +11,7 @@ export default function Nav() {
 
   return (
     <nav class="mb-8">
-      <ul class="container flex items-center pr-3 font-semibold">
+      <ul class="container flex items-center pr-3 font-semibold flex-wrap">
         <li class={`border-b-2 ${active("/")} mr-1.5 sm:mr-6`}>
           <Link href="/" defaultBlack>
             Home

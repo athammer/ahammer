@@ -1,5 +1,3 @@
-import { A } from "@solidjs/router";
-
 import Title from "~/features/Title";
 import Blog from "~/features/blog/ui/Blog";
 import Work from "~/features/Work";

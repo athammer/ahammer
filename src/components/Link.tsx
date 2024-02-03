@@ -13,7 +13,7 @@ export const Link = (props: LinkProps) => {
         href={props.href}
         target="_blank"
         class={` ${
-          props.defaultBlack ? "" : "text-sky-600"
+          props.defaultBlack ? "" : "text-sky-700"
         } hover:text-sky-800`}
       >
         {props.children}
