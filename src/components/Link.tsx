@@ -14,7 +14,7 @@ export const Link = (props: LinkProps) => {
         target="_blank"
         class={` ${
           props.defaultBlack ? "" : "text-sky-700"
-        } hover:text-sky-800`}
+        } hover:text-sky-400`}
       >
         {props.children}
       </a>
@@ -24,7 +24,7 @@ export const Link = (props: LinkProps) => {
   return (
     <A
       href={props.href}
-      class={`${props.defaultBlack ? "" : "text-sky-600"} hover:text-sky-800`}
+      class={`${props.defaultBlack ? "" : "text-sky-700"} hover:text-sky-400`}
     >
       {props.children}
     </A>
