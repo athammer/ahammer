@@ -11,26 +11,26 @@ export default function Nav() {
 
   return (
     <nav class="mb-8">
-      <ul class="container flex items-center pr-3 font-semibold flex-wrap">
-        <li class={`border-b-2 ${active("/")} mr-1.5 sm:mr-6`}>
+      <ul class="container flex items-center font-semibold flex-wrap gap-4 sm:gap-6">
+        <li class={`border-b-2 ${active("/")} mr-5 sm:mr-6`}>
           <Link href="/" defaultBlack>
             Home
           </Link>
         </li>
         |
-        <li class={`border-b-2 ${active("/blog")} mx-1.5 sm:mx-6`}>
+        <li class={`border-b-2 ${active("/blog")}`}>
           <Link href={randomBlog()} defaultBlack>
             Random Blog
           </Link>
         </li>
         |
-        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
+        <li class={`border-b-2 ${active("/about")}`}>
           <Link href="https://twitter.com/ahammer_dev" defaultBlack external>
             Twitter
           </Link>
         </li>
         |
-        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
+        <li class={`border-b-2 ${active("/about")}`}>
           <Link
             href="https://www.linkedin.com/in/athammer/"
             defaultBlack
@@ -40,7 +40,7 @@ export default function Nav() {
           </Link>
         </li>
         |
-        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
+        <li class={`border-b-2 ${active("/about")}`}>
           <Link href="https://github.com/athammer" defaultBlack external>
             Github
           </Link>
