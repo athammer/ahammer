@@ -5,7 +5,7 @@ export default function Work() {
       <div class="mb-4">
         <div class="flex place-content-between">
           <h3 class="font-semibold pr-2">Square - Block</h3>
-          <div class="text-slate-500">October 2022 - Present</div>
+          <div class="">October 2022 - Present</div>
         </div>
         <div class="text-slate-500">Full Stack Software Engineer L4</div>
 
@@ -43,7 +43,7 @@ export default function Work() {
           <h3 class="font-semibold pr-2">
             Formerly Rally Health - Optum Digital / UnitedHealth Group
           </h3>
-          <div class="text-slate-500">July 2021 - October 2022</div>
+          <div class="">July 2021 - October 2022</div>
         </div>
         <div class="text-slate-500">Full Stack Software Engineer II</div>
 
@@ -79,7 +79,7 @@ export default function Work() {
       <div class="mb-4">
         <div class="flex place-content-between">
           <h3 class="font-semibold pr-2">Clearview Social</h3>
-          <div class="text-slate-500">August 2019 - July 2021</div>
+          <div class="">August 2019 - July 2021</div>
         </div>
         <div class="text-slate-500">Full Stack Software Developer</div>
         <ul class="list-disc ml-4">
@@ -109,7 +109,7 @@ export default function Work() {
       <div class="mb-4">
         <div class="flex place-content-between">
           <h3 class="font-semibold pr-2">Clearview Social</h3>
-          <div class="text-slate-500">May 2018 - August 2019</div>
+          <div class="">May 2018 - August 2019</div>
         </div>
         <div class="text-slate-500">Intern</div>
         <ul class="list-disc ml-4">

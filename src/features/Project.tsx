@@ -7,7 +7,7 @@ export default function Project() {
       <div class="mb-4">
         <div class="flex place-content-between">
           <h3 class="font-semibold pr-2">CheapGames</h3>
-          <div class="text-slate-500">October 2023 - Present</div>
+          <div class="">October 2023 - Present</div>
         </div>
         <div class="flex">
           <Link href="#">To be released</Link>
@@ -24,7 +24,7 @@ export default function Project() {
       <div class="mb-4">
         <div class="flex place-content-between">
           <h3 class="font-semibold pr-2">PayShare</h3>
-          <div class="text-slate-500">January 2023 - October 2023</div>
+          <div class="">January 2023 - October 2023</div>
         </div>
         <div class="flex">
           <Link href="https://payshare.gg" external>

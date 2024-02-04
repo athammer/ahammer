@@ -6,7 +6,7 @@ export default function Blog() {
       <h2 class="text-2xl font-bold uppercase">Blog</h2>
       <div class="mb-4">
         <header class="flex gap-4 border-b-2">
-          <div class="min-w-14 text-slate-500">Date</div>
+          <div class="min-w-14 ">Date</div>
           <div>Title</div>
         </header>
         <Link
