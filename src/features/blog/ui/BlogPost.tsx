@@ -9,7 +9,7 @@ export const BlogPost = (props: BlogPostProps) => {
     <div class="max-w-4xl">
       <Title>{props.title} | ahammer.dev</Title>
 
-      <h1 class="text-4xl font-bold uppercase mb-4">{props.title}</h1>
+      <h1 class="text-4xl font-bold uppercase pb-4">{props.title}</h1>
       {props.children}
     </div>
   );

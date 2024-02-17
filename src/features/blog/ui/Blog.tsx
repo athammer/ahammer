@@ -18,6 +18,12 @@ export default function Blog() {
             <h3>Setting up Square Payment Links the Stripe Alternative</h3>
           </div>
         </Link>
+        <Link href="/blog/notes-on-database-sharding" defaultBlack>
+          <div class="flex gap-4 border-b-2 py-2 hover:bg-slate-100">
+            <div class="min-w-14"></div>
+            <h3>Notes on Database Sharding</h3>
+          </div>
+        </Link>
         <Link
           href="/blog/fix-for-deploying-static-solid-start-5.x-to-cloudflare-pages"
           defaultBlack
