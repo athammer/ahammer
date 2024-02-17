@@ -5,6 +5,10 @@ import { BlogParagraphSubsection } from "~/features/blog/ui/BlogParagraphSubsect
 export default function SettingUpSquarePaymentLinks() {
   return (
     <BlogPost title="Notes on Database Sharding">
+      <div class="text-sm text-gray-700 max-w-xl pb-2">
+        Note that theses are my personal notes from Obsidian. Some parts may be
+        my own words and some parts may be copied from the sources listed below.{" "}
+      </div>
       <BlogParagraph subtitle="What is Database Sharding?">
         Sharding is a database architecture pattern related to horizontal
         partitioning — the practice of separating one table’s rows into multiple
