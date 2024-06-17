@@ -1,4 +1,4 @@
-import { codeToHtml } from 'shiki'
+import { codeToHtml } from 'shiki/bundle/web'
 
 export const convertCodeString = async ([code, lang]: [string, string?] | any) =>
   await codeToHtml(code, {
