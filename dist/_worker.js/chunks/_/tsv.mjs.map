@@ -1,0 +1,1 @@
+{"version":3,"file":"tsv.mjs","sources":["../../../../node_modules/shiki/dist/langs/tsv.mjs"],"sourcesContent":null,"names":["tsv","Object","freeze","displayName","fileTypes","name","patterns","captures","match","scopeName"],"mappings":"","x_google_ignoreList":[0]}

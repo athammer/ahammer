@@ -1,0 +1,1 @@
+{"version":3,"file":"logo.mjs","sources":["../../../../node_modules/shiki/dist/langs/logo.mjs"],"sourcesContent":null,"names":["logo","Object","freeze","displayName","fileTypes","name","patterns","match","captures","begin","beginCaptures","end","scopeName"],"mappings":"","x_google_ignoreList":[0]}

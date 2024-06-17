@@ -1,0 +1,1 @@
+{"version":3,"file":"shellsession.mjs","sources":["../../../../node_modules/shiki/dist/langs/shellsession.mjs"],"sourcesContent":null,"names":["shellsession","shellscript","Object","freeze","displayName","fileTypes","name","patterns","captures","include","match","scopeName","embeddedLangs","aliases"],"mappings":"","x_google_ignoreList":[0]}

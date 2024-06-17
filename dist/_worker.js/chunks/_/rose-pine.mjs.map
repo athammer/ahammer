@@ -1,0 +1,1 @@
+{"version":3,"file":"rose-pine.mjs","sources":["../../../../node_modules/shiki/dist/themes/rose-pine.mjs"],"sourcesContent":null,"names":["rosePine","Object","freeze","colors","descriptionForeground","errorForeground","focusBorder","foreground","displayName","name","tokenColors","scope","settings","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

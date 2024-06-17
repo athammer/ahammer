@@ -1,0 +1,1 @@
+{"version":3,"file":"nextflow.mjs","sources":["../../../../node_modules/shiki/dist/langs/nextflow.mjs"],"sourcesContent":null,"names":["nextflow","Object","freeze","displayName","name","patterns","include","repository","match","begin","beginCaptures","comment","end","captures","endCaptures","scopeName","aliases"],"mappings":"","x_google_ignoreList":[0]}

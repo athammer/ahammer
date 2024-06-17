@@ -1,0 +1,1 @@
+{"version":3,"file":"wasm2.mjs","sources":["../../../../node_modules/@shikijs/core/dist/wasm-inlined.mjs"],"sourcesContent":null,"names":["wasmBinary","Uint8Array","from","atob","c","charCodeAt","getWasmInstance","async","info","WebAssembly","instantiate","then","wasm","instance","exports"],"mappings":"","x_google_ignoreList":[0]}

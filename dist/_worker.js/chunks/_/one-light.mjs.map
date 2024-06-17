@@ -1,0 +1,1 @@
+{"version":3,"file":"one-light.mjs","sources":["../../../../node_modules/shiki/dist/themes/one-light.mjs"],"sourcesContent":null,"names":["oneLight","Object","freeze","colors","focusBorder","displayName","name","tokenColors","scope","settings","fontStyle","foreground","background","type"],"mappings":"","x_google_ignoreList":[0]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"wenyan.mjs","sources":["../../../../node_modules/shiki/dist/langs/wenyan.mjs"],"sourcesContent":null,"names":["wenyan","Object","freeze","displayName","name","patterns","include","repository","begin","end","match","constants","expression","keywords","symbols","variables","scopeName","aliases"],"mappings":"","x_google_ignoreList":[0]}

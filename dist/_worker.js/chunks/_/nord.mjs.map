@@ -1,0 +1,1 @@
+{"version":3,"file":"nord.mjs","sources":["../../../../node_modules/shiki/dist/themes/nord.mjs"],"sourcesContent":null,"names":["nord","Object","freeze","colors","descriptionForeground","errorForeground","focusBorder","foreground","displayName","name","semanticHighlighting","tokenColors","settings","background","scope","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

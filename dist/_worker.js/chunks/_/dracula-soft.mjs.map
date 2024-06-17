@@ -1,0 +1,1 @@
+{"version":3,"file":"dracula-soft.mjs","sources":["../../../../node_modules/shiki/dist/themes/dracula-soft.mjs"],"sourcesContent":null,"names":["draculaSoft","Object","freeze","colors","errorForeground","focusBorder","foreground","displayName","name","semanticHighlighting","tokenColors","scope","settings","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

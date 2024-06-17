@@ -1,0 +1,1 @@
+{"version":3,"file":"min-light.mjs","sources":["../../../../node_modules/shiki/dist/themes/min-light.mjs"],"sourcesContent":null,"names":["minLight","Object","freeze","colors","focusBorder","foreground","displayName","name","tokenColors","settings","scope","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

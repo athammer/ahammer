@@ -1,0 +1,1 @@
+{"version":3,"file":"sparql.mjs","sources":["../../../../node_modules/shiki/dist/langs/sparql.mjs"],"sourcesContent":null,"names":["sparql","turtle","Object","freeze","displayName","fileTypes","name","patterns","include","repository","match","functions","variables","scopeName","embeddedLangs"],"mappings":"","x_google_ignoreList":[0]}

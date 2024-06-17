@@ -1,0 +1,1 @@
+{"version":3,"file":"git-rebase.mjs","sources":["../../../../node_modules/shiki/dist/langs/git-rebase.mjs"],"sourcesContent":null,"names":["gitRebase","shellscript","Object","freeze","displayName","name","patterns","captures","match","include","scopeName","embeddedLangs"],"mappings":"","x_google_ignoreList":[0]}

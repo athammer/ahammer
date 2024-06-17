@@ -1,0 +1,1 @@
+{"version":3,"file":"glsl.mjs","sources":["../../../../node_modules/shiki/dist/langs/glsl.mjs"],"sourcesContent":null,"names":["glsl","c","Object","freeze","displayName","fileTypes","foldingStartMarker","foldingStopMarker","name","patterns","match","include","scopeName","embeddedLangs"],"mappings":"","x_google_ignoreList":[0]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"monokai.mjs","sources":["../../../../node_modules/shiki/dist/themes/monokai.mjs"],"sourcesContent":null,"names":["monokai","Object","freeze","colors","focusBorder","displayName","name","semanticHighlighting","tokenColors","settings","foreground","scope","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

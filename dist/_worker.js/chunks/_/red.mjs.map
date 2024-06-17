@@ -1,0 +1,1 @@
+{"version":3,"file":"red.mjs","sources":["../../../../node_modules/shiki/dist/themes/red.mjs"],"sourcesContent":null,"names":["red","Object","freeze","colors","errorForeground","focusBorder","displayName","name","semanticHighlighting","tokenColors","settings","foreground","scope","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

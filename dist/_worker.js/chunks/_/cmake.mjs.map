@@ -1,0 +1,1 @@
+{"version":3,"file":"cmake.mjs","sources":["../../../../node_modules/shiki/dist/langs/cmake.mjs"],"sourcesContent":null,"names":["cmake","Object","freeze","displayName","fileTypes","name","patterns","comment","match","begin","end","repository","scopeName"],"mappings":"","x_google_ignoreList":[0]}

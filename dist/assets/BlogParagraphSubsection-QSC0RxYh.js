@@ -1,0 +1,1 @@
+import{ssr as e,ssrHydrationKey as r,escape as s}from"solid-js/web";var a=["<div",' class="py-4"><!--$-->',"<!--/--><p>","</p></div>"],l=["<h2",' class="text-lg font-bold color text-gray-700 uppercase">',"</h2>"];const c=t=>e(a,r(),t.subSectionTitle&&e(l,r(),s(t.subSectionTitle)),s(t.children));export{c as B};

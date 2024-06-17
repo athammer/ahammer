@@ -1,0 +1,1 @@
+{"version":3,"file":"jssm.mjs","sources":["../../../../node_modules/shiki/dist/langs/jssm.mjs"],"sourcesContent":null,"names":["jssm","Object","freeze","displayName","fileTypes","name","patterns","begin","captures","comment","end","match","scopeName","aliases"],"mappings":"","x_google_ignoreList":[0]}

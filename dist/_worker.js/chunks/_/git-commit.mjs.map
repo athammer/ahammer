@@ -1,0 +1,1 @@
+{"version":3,"file":"git-commit.mjs","sources":["../../../../node_modules/shiki/dist/langs/git-commit.mjs"],"sourcesContent":null,"names":["gitCommit","diff","Object","freeze","displayName","name","patterns","begin","comment","contentName","end","include","captures","match","scopeName","embeddedLangs"],"mappings":"","x_google_ignoreList":[0]}

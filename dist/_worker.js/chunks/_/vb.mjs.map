@@ -1,0 +1,1 @@
+{"version":3,"file":"vb.mjs","sources":["../../../../node_modules/shiki/dist/langs/vb.mjs"],"sourcesContent":null,"names":["vb","Object","freeze","displayName","name","patterns","match","include","begin","end","captures","beginCaptures","endCaptures","repository","scopeName","aliases"],"mappings":"","x_google_ignoreList":[0]}

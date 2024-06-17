@@ -1,0 +1,1 @@
+{"version":3,"file":"pascal.mjs","sources":["../../../../node_modules/shiki/dist/langs/pascal.mjs"],"sourcesContent":null,"names":["pascal","Object","freeze","displayName","fileTypes","name","patterns","match","captures","begin","end","beginCaptures","endCaptures","scopeName"],"mappings":"","x_google_ignoreList":[0]}

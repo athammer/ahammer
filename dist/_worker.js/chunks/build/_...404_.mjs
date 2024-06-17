@@ -1,0 +1,2 @@
+import{s as r,e as a,c as o,a as t}from"../runtime.mjs";import{X as s}from"./Link.mjs";import{a as e}from"./random-blog.mjs";import"node:async_hooks";var m=["<main",' class="text-center mx-auto text-gray-700 p-4"><h1 class="">Not Found :(</h1><p>Try a \x3c!--$--\x3e',"\x3c!--/--\x3e instead? :)</p></main>"];function c(){return r(m,t(),a(o(s,{get href(){return e()},children:"random blog post"})))}export{c as default};
+//# sourceMappingURL=_...404_.mjs.map

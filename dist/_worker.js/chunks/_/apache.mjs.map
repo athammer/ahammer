@@ -1,0 +1,1 @@
+{"version":3,"file":"apache.mjs","sources":["../../../../node_modules/shiki/dist/langs/apache.mjs"],"sourcesContent":null,"names":["apache","Object","freeze","displayName","fileTypes","name","patterns","captures","match","scopeName"],"mappings":"","x_google_ignoreList":[0]}

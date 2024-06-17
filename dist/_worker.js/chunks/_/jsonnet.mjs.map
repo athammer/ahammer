@@ -1,0 +1,1 @@
+{"version":3,"file":"jsonnet.mjs","sources":["../../../../node_modules/shiki/dist/langs/jsonnet.mjs"],"sourcesContent":null,"names":["jsonnet","Object","freeze","displayName","name","patterns","include","repository","match","comment","begin","end","expression","functions","beginCaptures","keywords","literals","scopeName"],"mappings":"","x_google_ignoreList":[0]}

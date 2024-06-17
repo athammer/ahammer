@@ -1,0 +1,1 @@
+{"version":3,"file":"desktop.mjs","sources":["../../../../node_modules/shiki/dist/langs/desktop.mjs"],"sourcesContent":null,"names":["desktop","Object","freeze","displayName","name","patterns","include","repository","inCategories","match","inCommands","keywords","layout","begin","end","values","scopeName"],"mappings":"","x_google_ignoreList":[0]}

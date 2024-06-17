@@ -1,0 +1,1 @@
+{"version":3,"file":"solarized-light.mjs","sources":["../../../../node_modules/shiki/dist/themes/solarized-light.mjs"],"sourcesContent":null,"names":["solarizedLight","Object","freeze","colors","focusBorder","displayName","name","semanticHighlighting","tokenColors","settings","foreground","scope","fontStyle","type"],"mappings":"","x_google_ignoreList":[0]}

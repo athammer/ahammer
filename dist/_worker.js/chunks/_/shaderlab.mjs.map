@@ -1,0 +1,1 @@
+{"version":3,"file":"shaderlab.mjs","sources":["../../../../node_modules/shiki/dist/langs/shaderlab.mjs"],"sourcesContent":null,"names":["shaderlab","hlsl","Object","freeze","displayName","name","patterns","begin","end","match","include","beginCaptures","endCaptures","repository","numbers","scopeName","embeddedLangs","aliases"],"mappings":"","x_google_ignoreList":[0]}

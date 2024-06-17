@@ -1,0 +1,1 @@
+{"version":3,"file":"less.mjs","sources":["../../../../node_modules/shiki/dist/langs/less.mjs"],"sourcesContent":null,"names":["less","Object","freeze","displayName","name","patterns","include","repository","captures","match","begin","end","endCaptures","beginCaptures","dimensions","contentName","selector","selectors","scopeName"],"mappings":"","x_google_ignoreList":[0]}
