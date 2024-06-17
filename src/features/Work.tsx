@@ -9,7 +9,7 @@ export default function Work() {
         </div>
         <div class="text-slate-500">Full Stack Software Engineer L4</div>
 
-        <ul class="list-disc ml-4">
+        <ul class="list-disc ml-4 flex flex-col gap-1">
           <li>
             Designed and led several projects for Square Payment Links on a
             9-person team using Golang, PHP, Typescript, and Vue that managed
@@ -47,7 +47,7 @@ export default function Work() {
         </div>
         <div class="text-slate-500">Full Stack Software Engineer II</div>
 
-        <ul class="list-disc ml-4">
+        <ul class="list-disc ml-4 flex flex-col gap-1">
           <li>
             Contributed with an 8-person Scrum team to a React front-end and
             Scala microservice back-end for a highly visible UHC healthcare
@@ -82,7 +82,7 @@ export default function Work() {
           <div class="">August 2019 - July 2021</div>
         </div>
         <div class="text-slate-500">Full Stack Software Developer</div>
-        <ul class="list-disc ml-4">
+        <ul class="list-disc ml-4 flex flex-col gap-1">
           <li>
             Engineered a web and mobile React/ Expo React Native app with a Node
             Express backend with an Agile 5-person team for a consumer facing
@@ -112,7 +112,7 @@ export default function Work() {
           <div class="">May 2018 - August 2019</div>
         </div>
         <div class="text-slate-500">Intern</div>
-        <ul class="list-disc ml-4">
+        <ul class="list-disc ml-4 flex flex-col gap-1">
           <li>
             Participated in creating a newly published Android and iOS app
             created with React Native, Redux, and Expo

@@ -24,6 +24,10 @@ export default function Nav() {
           </Link>
         </li>
         |
+        <li class={`border-b-2 ${active("/blog")}`}>
+          <a href="/Aaron Taylor Hammer.pdf" download="Aaron Hammer's Resume">Resume</a>
+        </li>
+        |
         <li class={`border-b-2 ${active("/about")}`}>
           <Link href="https://twitter.com/ahammer_dev" defaultBlack external>
             Twitter

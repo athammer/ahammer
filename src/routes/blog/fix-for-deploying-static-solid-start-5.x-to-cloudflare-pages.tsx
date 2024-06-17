@@ -7,7 +7,7 @@ import { Suspense } from "solid-js";
 
 export default function DeployingSolidStartCloudflarePages() {
   return (
-    <BlogPost title="Deploying your Static SolidStart 5.x to Cloudflare Pages">
+    <BlogPost title="Deploying your Static SolidStart 0.5.x to Cloudflare Pages">
       <BlogParagraph>
         <Link href="https://vinxi.vercel.app/" external>
           SolidStart
