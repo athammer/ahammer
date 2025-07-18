@@ -72,10 +72,6 @@ export default function Home() {
             observability to finally ensuring it's product market fit for our
             customers.
           </Text>
-          <Text class="mt-2">
-            Creator of the Block Checkout Platform, a platform for creating
-            checkout experiences for your business using Square's APIs.
-          </Text>
         </section>
 
         {/* Experience */}
@@ -100,8 +96,18 @@ export default function Home() {
           </div>
           <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
             <li>
-              Coming in at a senior level to accelerate the team's delivery on
-              Square Payment Links.
+              <Text as="span">
+                Pitched and created the architecture for the Block Checkout
+                Platform that was funded which was created to unify all 14+ web
+                checkouts throughout Square, Cash App, Tidal, and more.
+              </Text>
+            </li>
+            <li>
+              <Text as="span">
+                Led a small team to build out the Block Checkout Platform, which
+                spanned multiple business units and required coordination with
+                over 12 platform and application teams.
+              </Text>
             </li>
           </ul>
 
