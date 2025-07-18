@@ -69,8 +69,8 @@ export default function Home() {
           <Text class="mt-2">
             High agency and passionate full stack software engineer who owns and
             drives the full stack of a product from it's CSS to the backend to
-            observability to finally ensuring it's product market fit for our
-            customers.
+            it's observability to ensure a remarkable user experience for our
+            customers no matter where problems may be.
           </Text>
         </section>
 
