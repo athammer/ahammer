@@ -74,9 +74,7 @@ export const Text: Component<TextProps> = (props) => {
   );
 };
 
-type TextLinkProps = TextProps & {
-  href: string;
-};
+type TextLinkProps = TextProps & JSX.AnchorHTMLAttributes<HTMLAnchorElement>;
 export const TextLink: Component<TextLinkProps> = (props) => {
   return (
     <Text

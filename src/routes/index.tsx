@@ -1,5 +1,7 @@
 import { Text } from "~/components/ui/Text";
 import { blogs } from "~/data/blogs";
+// @ts-ignore - provided by runtime
+import { Title } from "@solidjs/meta";
 
 export default function Home() {
   const handleRandomBlog = async () => {
@@ -16,6 +18,7 @@ export default function Home() {
   };
   return (
     <>
+      <Title>Aaron Hammer | Full Stack Engineer</Title>
       {/* Resume download button */}
       <div class="mx-auto max-w-4xl flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-end mt-4">
         <a

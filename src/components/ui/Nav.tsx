@@ -11,49 +11,62 @@ export default function Nav() {
     <header class="bg-white shadow">
       <nav class="container mx-auto flex flex-wrap items-center justify-between p-4 text-gray-700">
         <div class="text-lg font-semibold">
-          <a href="/">Aaron Hammer</a>
+          <TextLink href="/" variantColor="default" class="hover:text-sky-600">
+            Aaron Hammer
+          </TextLink>
         </div>
 
         <ul class="flex flex-wrap gap-4 text-sm">
           <li class={`border-b-2 ${active("/")}`}>
-            <a href="/" class="hover:text-sky-600">
+            <TextLink
+              href="/"
+              class="hover:text-sky-600"
+              variantColor="default"
+            >
               Home
-            </a>
+            </TextLink>
           </li>
           <li class={`border-b-2 ${active("/blogs")}`}>
-            <a href="/blogs" class="hover:text-sky-600">
+            <TextLink
+              href="/blogs"
+              class="hover:text-sky-600"
+              variantColor="default"
+            >
               Blogs
-            </a>
+            </TextLink>
           </li>
           <li>
-            <a
+            <TextLink
               href="https://x.com/ahammer__"
               target="_blank"
               rel="noopener"
               class="hover:text-sky-600"
+              variantColor="default"
             >
               Twitter
-            </a>
+            </TextLink>
           </li>
           <li>
-            <a
+            <TextLink
               href="https://www.linkedin.com/in/athammer/"
               target="_blank"
               rel="noopener"
               class="hover:text-sky-600"
+              variantColor="default"
             >
               LinkedIn
-            </a>
+            </TextLink>
           </li>
           <li>
-            <a
+            <TextLink
               href="https://github.com/athammer"
               target="_blank"
               rel="noopener"
               class="hover:text-sky-600"
+              variantColor="default"
             >
               GitHub
-            </a>
+            </TextLink>
           </li>
         </ul>
       </nav>
