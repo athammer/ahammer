@@ -132,8 +132,8 @@ export default function Home() {
                 <Text as="span">
                   Designed and led several projects for Square Payment Links on
                   a 9-person team using Golang, PHP, TypeScript, and Vue that
-                  managed over $2.2 B in processing volume, growing 54% YoY for
-                  2023.
+                  managed over $4.1 B in processing volume, growing 54% YoY for
+                  2024.
                 </Text>
               </li>
               <li>
