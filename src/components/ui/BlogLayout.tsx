@@ -12,7 +12,7 @@ const BlogLayout: Component<{
   visitors: number;
 }> = (props) => {
   return (
-    <main class="mx-auto max-w-3xl p-8 text-gray-800">
+    <main class="mx-auto max-w-4xl p-8 my-4 bg-white/80 backdrop-blur-md text-gray-800 shadow-xl ring-1 ring-gray-200 rounded-2xl">
       <Title>{props.title + " | Aaron Hammer"}</Title>
       <article class={cn("space-y-6")}>
         <header>

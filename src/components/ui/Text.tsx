@@ -7,7 +7,7 @@ import { cn } from "~/utils/styles";
 const textVariants = cva("text-foreground", {
   variants: {
     variant: {
-      default: "leading-7",
+      default: "leading-8",
       headerCta: "text-6xl font-semibold tracking-tight",
       h1: "text-4xl font-extrabold tracking-tight lg:text-5xl",
       h2: "text-3xl font-semibold tracking-tight",
