@@ -43,7 +43,7 @@ export default function Home() {
           Download Resume
         </a>
         <a
-          href="https://twitter.com/aaronhammer"
+          href="https://twitter.com/ahammer__"
           target="_blank"
           class="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-2 text-sm md:text-base font-semibold text-white shadow-lg transition hover:from-blue-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
