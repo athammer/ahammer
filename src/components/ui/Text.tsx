@@ -7,14 +7,14 @@ import { cn } from "~/utils/styles";
 const textVariants = cva("text-foreground", {
   variants: {
     variant: {
-      default: "leading-8",
+      default: "leading-relaxed md:leading-8",
       headerCta: "text-6xl font-semibold tracking-tight",
       h1: "text-4xl font-extrabold tracking-tight lg:text-5xl",
       h2: "text-3xl font-semibold tracking-tight",
       h3: "text-2xl font-semibold tracking-tight",
       h4: "text-xl font-semibold tracking-tight",
       large: "text-lg font-semibold",
-      small: "text-sm font-medium leading-none",
+      small: "text-sm font-medium leading-6",
     },
     variantColor: {
       default: "text-gray-900",
@@ -80,7 +80,7 @@ export const TextLink: Component<TextLinkProps> = (props) => {
     <Text
       as="a"
       variantColor="link"
-      class={cn(props.class, "hover:underline")}
+      class={cn(props.class, "hover:underline leading-inherit")}
       {...props}
     />
   );

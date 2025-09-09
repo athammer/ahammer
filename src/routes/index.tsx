@@ -121,7 +121,7 @@ export default function Home() {
               </Text>
             </div>
           </div>
-          <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+          {/* <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
             <li>
               <Text as="span">
                 Pitched and created the architecture for the Block Checkout
@@ -136,7 +136,7 @@ export default function Home() {
                 over 12 platform and application teams.
               </Text>
             </li>
-          </ul>
+          </ul> */}
 
           {/* Square – Block (previous role) */}
           <div class="mt-6">
@@ -329,6 +329,38 @@ export default function Home() {
           <Text variant="h2" class="border-b border-gray-200 pb-1 mb-2">
             Projects
           </Text>
+
+          {/* Where I’d Live */}
+          <div class="mt-4">
+            <div class="flex justify-between">
+              <Text variant="h3" class="mb-2">
+                <a
+                  href="https://whereidlive.com/"
+                  target="_blank"
+                  class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
+                >
+                  whereidlive.com – Creator
+                </a>
+              </Text>
+              <Text variant="small" variantColor="muted" class="mt-1">
+                Aug 2025 – Present
+              </Text>
+            </div>
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+              <li>
+                <Text as="span">
+                  Interactive web app to mark living preferences across the US,
+                  Canada, Europe, and more; built with React Router and Tailwind
+                  CSS.
+                </Text>
+              </li>
+              <li>
+                <Text as="span">
+                  Reached over 30,000 unique visitors in the first month.
+                </Text>
+              </li>
+            </ul>
+          </div>
 
           {/* CheapGames */}
           <div class="mt-4">
