@@ -184,7 +184,7 @@ export default function Home() {
               <li>
                 <Text as="span">
                   Built the buyer-side flow for Square's restaurant QR code
-                  checkout experience, contributing ~$70M in monthly processing
+                  checkout experience, contributing ~$50M in yearly processing
                   volume.
                 </Text>
               </li>
