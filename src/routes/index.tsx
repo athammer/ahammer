@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Title>Aaron Hammer | Full Stack Engineer</Title>
       {/* Resume download button */}
-      <div class="mx-auto max-w-4xl flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-end mt-4">
+      <div class="mx-auto max-w-5xl flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-end mt-4">
         <a
           href="https://drive.google.com/file/d/1AX2hg96dhFrnytj0mNN9uIxIcN0QrXOv/view?usp=sharing"
           target="_blank"
@@ -67,37 +67,37 @@ export default function Home() {
         </button>
       </div>
 
-      <main class="mx-auto max-w-4xl p-6 md:p-10 bg-white/80 backdrop-blur-md text-gray-800 shadow-xl ring-1 ring-gray-200 rounded-2xl space-y-10 my-4">
+      <main class="mx-auto max-w-5xl p-6 md:p-10 bg-white/80 backdrop-blur-md text-gray-800 shadow-xl ring-1 ring-gray-200 rounded-2xl space-y-10 my-4">
         <section class="text-center mb-6">
           <Text variant="h1" class="mb-2">
-            AARON HAMMER
-          </Text>
-          <Text variant="h2" class="mb-2">
-            Full Stack Engineer, Founder, &amp; Builder
+            AARON TAYLOR HAMMER
           </Text>
           <Text variant="small" variantColor="muted" class="mb-4">
-            New York, NY · aaron@athammer.me · (716) 445-1308
+            aaron@athammer.me · Stamford, CT
             <span> · </span>
             <TextLink
               href="https://linkedin.com/in/athammer"
               target="_blank"
               class="text-blue-600 hover:text-blue-700 transition-colors"
             >
-              in/athammer
+              linkedin.com/in/athammer
             </TextLink>
-          </Text>
-        </section>
-
-        {/* Summary */}
-        <section class="mt-8">
-          <Text variant="h2" class="mb-2 border-b border-gray-200 pb-1">
-            Summary
-          </Text>
-          <Text class="mt-2">
-            High agency and passionate full stack software engineer who owns and
-            drives the full stack of a product from it's CSS to the backend to
-            it's observability to ensure a remarkable user experience for our
-            customers no matter where problems may be.
+            <span> · </span>
+            <TextLink
+              href="https://github.com/athammer"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              github.com/athammer
+            </TextLink>
+            <span> · </span>
+            <TextLink
+              href="https://ahammer.dev"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              ahammer.dev
+            </TextLink>
           </Text>
         </section>
 
@@ -114,78 +114,94 @@ export default function Home() {
             </Text>
             <div class="flex justify-between">
               <Text variant="small" variantColor="muted" class="mb-2">
-                Square / Block, New York, NY
+                Square / Block - Block, Stamford, CT - Remote
               </Text>
               <Text variant="small" variantColor="muted" class="mb-2">
-                May&nbsp;2024 – Present
+                Oct&nbsp;2024 – Present
               </Text>
             </div>
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
+              <li>
+                <Text as="span">
+                  Pitched and created the initial fullstack architecture for the
+                  Block Checkout Platform which was created to unify all
+                  checkouts that total $35 billion in yearly GPV spanning 8
+                  teams across Cash App and Square.
+                </Text>
+              </li>
+              <li>
+                <Text as="span">
+                  Architectured the frontend engineering designs and led a small
+                  team of 3 to implement Order with Google and Google Business
+                  Profile syncing for all Square and Cash App sellers in React
+                  and Typescript.
+                </Text>
+              </li>
+              <li>
+                <Text as="span">
+                  Led a team of 6 engineers for a rapid prototyping to prove out
+                  Square's agentic commerce capabilities.
+                </Text>
+              </li>
+              <li>
+                <Text as="span">
+                  With a team of 2 other engineers we quickly brought Square's
+                  ecommerce checkouts in EAA's accessibility compliance
+                </Text>
+              </li>
+            </ul>
           </div>
-          {/* <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
-            <li>
-              <Text as="span">
-                Pitched and created the architecture for the Block Checkout
-                Platform that was funded which was created to unify all 14+ web
-                checkouts throughout Square, Cash App, Tidal, and more.
-              </Text>
-            </li>
-            <li>
-              <Text as="span">
-                Led a small team to build out the Block Checkout Platform, which
-                spanned multiple business units and required coordination with
-                over 12 platform and application teams.
-              </Text>
-            </li>
-          </ul> */}
 
           {/* Square – Block (previous role) */}
           <div class="mt-6">
             <Text variant="h3" class="mb-2">
-              Full Stack Software Engineer
+              Full Stack Software Engineer II
             </Text>
             <div class="flex justify-between">
               <Text variant="small" variantColor="muted" class="mb-2">
-                Square / Block, New York, NY
+                Square / Block - Block, Denver, CO - Remote
               </Text>
               <Text variant="small" variantColor="muted" class="mb-2">
-                Oct&nbsp;2022 – May&nbsp;2024
+                Oct&nbsp;2022 – Oct&nbsp;2024
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
               <li>
                 <Text as="span">
-                  Designed and led several projects for Square Payment Links on
-                  a 9-person team using Golang, PHP, TypeScript, and Vue that
-                  managed over $4.1B in processing volume, growing 54% YoY for
-                  2024.
+                  Led several projects and owned the frontend for Square Payment
+                  Links on a 9-person team using Golang, PHP, Typescript, and
+                  Vue that managed over $4+ billion in processing volume,
+                  growing 62% YoY for 2024.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Rebuilt Square Payment Links' tipping feature enabling over
-                  1M+ sellers to customize tip percentages in their local
-                  currencies, with localized defaults.
+                  Rebuilt Square Payment Link's tipping feature to let over 1
+                  million sellers customize tip percentages, support their local
+                  currencies, and to provide more localized tipping percentages
+                  as defaults.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Created new observability standards by migrating the team's
-                  stack to Datadog, introducing anomaly alerts, enhanced
-                  dashboards, front-end metric alerting, and automatic API
-                  acceptance testing.
+                  Drove our code red for reliability, created and owned our
+                  observability documentation and stack in Datadog, and wrote up
+                  and led a 90-day plan to get all our SLOs from failing to
+                  99.995% at the end of our initiative.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Led the migration of all tier-1 services for Square Payment
-                  Links from on-prem to AWS using Terraform.
+                  Led the migration of our Payment Links' services from on-prem
+                  to AWS infrastructure using Terraform.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Built the buyer-side flow for Square's restaurant QR code
-                  checkout experience, contributing ~$50M in yearly processing
-                  volume.
+                  Created the buyer-side frontend for Square's restaurant QR
+                  code checkout experience, visited restaurants during to offer
+                  help, and unlocked over $70 million in processing volume for
+                  Square Payment Links' MoM.
                 </Text>
               </li>
             </ul>
@@ -194,48 +210,46 @@ export default function Home() {
           {/* Rally Health */}
           <div class="mt-6">
             <Text variant="h3" class="mb-2">
-              Full Stack Software Engineer
+              Full Stack Software Engineer II
             </Text>
             <div class="flex justify-between">
               <Text variant="small" variantColor="muted" class="mb-2">
-                Rally Health / Optum Digital, Denver, CO
+                Formerly Rally Health - Optum Digital / UnitedHealth Group,
+                Denver, CO - Remote
               </Text>
               <Text variant="small" variantColor="muted" class="mb-2">
                 Jul&nbsp;2021 – Oct&nbsp;2022
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
               <li>
                 <Text as="span">
-                  Contributed with an 8-person team to a React front-end and
-                  Scala microservice back-end for a UHC dashboard accessed by
-                  50M+ members.
+                  Contributed with an 8-person Scrum team to a React frontend
+                  and Scala microservice backend for the UHC healthcare client
+                  dashboard landing page that's accessed by over 50+ million
+                  customers worldwide.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Implemented urgent SSO redirect on myUHC enabling 26M
-                  customers to order free COVID-19 tests in compliance with
-                  federal mandate within one week.
+                  Led and rapidly implemented the frontend requirements for a
+                  SSO redirect on myUHC to enable over 26 million customers to
+                  receive free COVID-19 tests by week's end to comply with
+                  federal mandates.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Drove performance initiative cutting the max bundle from 1.62
-                  MB to 495 KB and reducing FCP by 0.4 s via lazy-loading and
-                  bundle splitting.
+                  Drove a performance initiative to improve UX. I reduced our
+                  max bundle from 1.62MBs to 495KBs and slashed FCP by 0.4
+                  seconds through lazy-loading, bundle-splitting and concurrent
+                  rendering.
                 </Text>
               </li>
               <li>
                 <Text as="span">
-                  Spearheaded front-end domain unification reducing domains from
-                  6 to 1 for improved UX and developer clarity.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Migrated myUHC from AngularJS to ReactJS, shrinking bundle
-                  size by 30 % and page-load time by ~15 %.
+                  Contributed with a dedicated team to migrate the client
+                  dashboard, myUHC, from AngularJS to ReactJS
                 </Text>
               </li>
             </ul>
@@ -244,80 +258,23 @@ export default function Home() {
           {/* Clearview Social – Developer */}
           <div class="mt-6">
             <Text variant="h3" class="mb-2">
-              Junior Full Stack Software Engineer
+              Full Stack Software Developer
             </Text>
             <div class="flex justify-between">
               <Text variant="small" variantColor="muted" class="mb-2">
-                Clearview Social, Buffalo, NY
+                Clearview Social, Denver, CO - Remote
               </Text>
               <Text variant="small" variantColor="muted" class="mb-2">
                 Aug&nbsp;2019 – Jul&nbsp;2021
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
               <li>
                 <Text as="span">
-                  Engineered a web and mobile React / Expo React Native app
-                  backed by Node Express in a 5-person Agile team.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Reduced React bundle size ~12 % with tree-shaking and package
-                  pruning.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Introduced Redis cache-aside strategy, achieving ~85 %
-                  cache-hit rate on common endpoints and lowering DB load.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Designed serverless image-caching API on AWS, cutting image
-                  transfer size by 80 % on heavy pages.
-                </Text>
-              </li>
-            </ul>
-          </div>
-
-          {/* Clearview Social – Intern */}
-          <div class="mt-6">
-            <Text variant="h3" class="mb-2">
-              Software Engineering Intern
-            </Text>
-            <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-2">
-                Clearview Social, Buffalo, NY
-              </Text>
-              <Text variant="small" variantColor="muted" class="mb-2">
-                May&nbsp;2018 – Aug&nbsp;2019
-              </Text>
-            </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
-              <li>
-                <Text as="span">
-                  Helped build newly released Android &amp; iOS app using React
-                  Native, Redux, and Expo.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Maintained SaaS web app built with React, Node.js, Express,
-                  Webpack, and Sass.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Added unit &amp; snapshot tests with Mocha, Chai, and Jest
-                  achieving ~92 % coverage.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Wrote optimized SQL and Sequelize queries for MySQL database
-                  on AWS RDS.
+                  Modeled and created the AWS infrastructure for a scalable
+                  serverless image caching API that returns images in a
+                  specified size and image format while caching alternative
+                  formats. Image transfer size dropped 50%+.
                 </Text>
               </li>
             </ul>
@@ -330,68 +287,27 @@ export default function Home() {
             Projects
           </Text>
 
-          {/* Where I’d Live */}
+          {/* Where I'd Live */}
           <div class="mt-4">
             <div class="flex justify-between">
               <Text variant="h3" class="mb-2">
                 <a
-                  href="https://whereidlive.com/"
+                  href="https://whereidlive.com"
                   target="_blank"
                   class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
                 >
-                  whereidlive.com – Creator
+                  WhereIdLive
                 </a>
               </Text>
               <Text variant="small" variantColor="muted" class="mt-1">
                 Aug 2025 – Present
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
               <li>
                 <Text as="span">
-                  Interactive web app to mark living preferences across the US,
-                  Canada, Europe, and more; built with React Router and Tailwind
-                  CSS.
-                </Text>
-              </li>
-              <li>
-                <Text as="span">
-                  Reached over 30,000 unique visitors in the first month.
-                </Text>
-              </li>
-            </ul>
-          </div>
-
-          {/* CheapGames */}
-          <div class="mt-4">
-            <div class="flex justify-between">
-              <Text variant="h3" class="mb-2">
-                CheapGames – Owner &amp; Creator
-              </Text>
-            </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
-              <li>
-                <Text as="span">
-                  Helps users find the best deals on video games across multiple
-                  stores. Built with Solid.js, TailwindCSS, and Golang.
-                </Text>
-              </li>
-            </ul>
-          </div>
-
-          {/* PayShare */}
-          <div class="mt-4">
-            <div class="flex justify-between">
-              <Text variant="h3" class="mb-2">
-                PayShare.gg
-              </Text>
-            </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
-              <li>
-                <Text as="span">
-                  Service enabling friends and family to share costs through
-                  one-time or subscription payments. Built with React Server
-                  Components, TailwindCSS, MySQL, and Stripe.
+                  Viral application that lets users pick their living
+                  preferences with 1m+ unique visits and 12m+ votes.
                 </Text>
               </li>
             </ul>
@@ -423,11 +339,27 @@ export default function Home() {
           <Text variant="h2" class="border-b border-gray-200 pb-1 mb-2">
             Skills
           </Text>
-          <Text class="mt-2">
-            JavaScript, TypeScript, Solid.js, React, HTML, CSS, Tailwind,
-            Webpack, Vite, Git, Figma, Accessibility (WCAG), Unit Testing
-            (Vitest, Jest)
-          </Text>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <Text variant="h4" class="mb-2">
+                Language &amp; Frameworks
+              </Text>
+              <Text class="leading-relaxed md:leading-relaxed">
+                Javascript, Python, Typescript, Golang, PHP, React, React
+                Native, Vue, Node.js, Express.js, Next.js, SQL
+              </Text>
+            </div>
+            <div>
+              <Text variant="h4" class="mb-2">
+                Tools, Tech, Certs, &amp; Skills
+              </Text>
+              <Text class="leading-relaxed md:leading-relaxed">
+                DataDog, AWS, Terraform, Checkouts, Payments, Conversions
+                optimizations, Accessibility, Observability, Testing,
+                Maintenance and refactoring, Software design and architecture
+              </Text>
+            </div>
+          </div>
         </section>
       </main>
     </>
