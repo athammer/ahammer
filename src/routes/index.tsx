@@ -151,7 +151,7 @@ export default function Home() {
                 Oct&nbsp;2022 – May&nbsp;2024
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Designed and led several projects for Square Payment Links on
@@ -204,7 +204,7 @@ export default function Home() {
                 Jul&nbsp;2021 – Oct&nbsp;2022
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Contributed with an 8-person team to a React front-end and
@@ -254,7 +254,7 @@ export default function Home() {
                 Aug&nbsp;2019 – Jul&nbsp;2021
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Engineered a web and mobile React / Expo React Native app
@@ -295,7 +295,7 @@ export default function Home() {
                 May&nbsp;2018 – Aug&nbsp;2019
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Helped build newly released Android &amp; iOS app using React
@@ -346,7 +346,7 @@ export default function Home() {
                 Aug 2025 – Present
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Interactive web app to mark living preferences across the US,
@@ -369,7 +369,7 @@ export default function Home() {
                 CheapGames – Owner &amp; Creator
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Helps users find the best deals on video games across multiple
@@ -386,7 +386,7 @@ export default function Home() {
                 PayShare.gg
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-snug md:leading-snug">
               <li>
                 <Text as="span">
                   Service enabling friends and family to share costs through
