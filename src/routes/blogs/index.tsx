@@ -63,6 +63,10 @@ export default function BlogsList() {
   return (
     <>
       <Title>Blogs | Aaron Hammer</Title>
+      <meta
+        name="description"
+        content="Technical blog posts by Aaron Hammer on software engineering, full stack development, alerts, observability, and building scalable systems."
+      />
       <main class="mx-auto max-w-3xl p-6 md:p-10 text-gray-800 space-y-6">
         <header class="text-center">
           <Text variant="h1" class="mb-2">

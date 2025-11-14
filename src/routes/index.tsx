@@ -19,6 +19,46 @@ export default function Home() {
   return (
     <>
       <Title>Aaron Hammer | Full Stack Engineer</Title>
+
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Aaron Taylor Hammer",
+          alternateName: "Aaron Hammer",
+          url: "https://ahammer.dev",
+          image: "https://ahammer.dev/favicon.ico",
+          jobTitle: "Senior Full Stack Software Engineer",
+          worksFor: {
+            "@type": "Organization",
+            name: "Square / Block",
+          },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Stamford",
+            addressRegion: "CT",
+            addressCountry: "US",
+          },
+          email: "aaron@athammer.me",
+          sameAs: [
+            "https://linkedin.com/in/athammer",
+            "https://github.com/athammer",
+            "https://twitter.com/ahammer__",
+          ],
+          knowsAbout: [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Golang",
+            "PHP",
+            "Full Stack Development",
+            "Web Development",
+            "Software Engineering",
+          ],
+        })}
+      </script>
+
       {/* Resume download button */}
       <div class="mx-auto max-w-5xl flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-end mt-4">
         <a
