@@ -130,14 +130,6 @@ export default function Home() {
             >
               github.com/athammer
             </TextLink>
-            <span> · </span>
-            <TextLink
-              href="https://ahammer.dev"
-              target="_blank"
-              class="text-blue-600 hover:text-blue-700 transition-colors"
-            >
-              ahammer.dev
-            </TextLink>
           </Text>
         </section>
 
