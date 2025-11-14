@@ -92,7 +92,7 @@ export default function NotFound() {
         </Show>
 
         {/* Links */}
-        <Text variant="h4">
+        <Text variant="h4" class="mt-4">
           <A href="/" class="text-sky-600 hover:underline">
             Home
           </A>{" "}

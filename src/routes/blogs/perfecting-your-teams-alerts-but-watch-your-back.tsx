@@ -6,7 +6,7 @@ export default function CssGridArticle() {
     <BlogLayout
       title="Perfecting your team's alerts, but watch your back"
       date="July 16, 2025"
-      visitors={0}
+      id={0}
     >
       <Text>
         I own and created the alerts and strategy for Square&rsquo;s web

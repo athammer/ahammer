@@ -29,4 +29,21 @@ Solid apps are built with _presets_, which optimise your project for deployment 
 
 By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
 
+## Blog View Counter with Upstash Redis
+
+This project uses Upstash Redis to store and track blog post view counts. Upstash works with any hosting provider (Railway, Vercel, Netlify, etc.) and has a generous free tier!
+
+See [UPSTASH_SETUP.md](./UPSTASH_SETUP.md) for detailed setup instructions.
+
+### Quick Setup
+
+1. Create a free account at [https://console.upstash.com/](https://console.upstash.com/)
+2. Create a new Redis database
+3. Copy your `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`
+4. Add them to your `.env` file locally (copy from `env.example`)
+5. Add them as environment variables in Railway:
+   - Go to your Railway project → Variables tab
+   - Add `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`
+6. Deploy and enjoy real-time view counts!
+
 ## This project was created with the [Solid CLI](https://github.com/solidjs-community/solid-cli)
