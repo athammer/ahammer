@@ -71,6 +71,9 @@ export default function BlogsList() {
           <Text variant="small" variantColor="muted">
             random thoughts random blogs
           </Text>
+          <Text variant="small" variantColor="muted">
+            sorry blogs are still a work in progress :(
+          </Text>
         </header>
 
         {/* Group blogs by year */}
