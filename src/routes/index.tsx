@@ -22,7 +22,7 @@ export default function Home() {
       {/* Resume download button */}
       <div class="mx-auto max-w-5xl flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-end mt-4">
         <a
-          href="https://drive.google.com/file/d/1AX2hg96dhFrnytj0mNN9uIxIcN0QrXOv/view?usp=sharing"
+          href="https://drive.google.com/file/d/13irV_bCwpUlnL_n8AYRJ84Jogidl0dkF/view?usp=sharing"
           target="_blank"
           class="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm md:text-base font-semibold text-white shadow-lg transition hover:from-sky-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
