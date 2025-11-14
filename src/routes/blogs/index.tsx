@@ -107,7 +107,7 @@ export default function BlogsList() {
                             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-lg bg-white/80 shadow-sm hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
                             aria-label={`Read blog post: ${blog.title}`}
                           >
-                            <Text variant="h3" class="flex-1">
+                            <Text variant="h4" class="flex-1">
                               {blog.title}
                             </Text>
                             <Text
