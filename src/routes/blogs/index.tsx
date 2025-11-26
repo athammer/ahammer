@@ -12,35 +12,17 @@ export default function BlogsList() {
   );
 
   onMount(async () => {
-    // Try to load from session storage first
-    const cachedViews = sessionStorage.getItem("blog_views_cache");
-    const cacheTimestamp = sessionStorage.getItem("blog_views_cache_time");
-    const CACHE_DURATION = 60_000 * 30; // 30 minutes in milliseconds
-
-    if (cachedViews && cacheTimestamp) {
-      const age = Date.now() - parseInt(cacheTimestamp, 10);
-      if (age < CACHE_DURATION) {
-        // Use cached data if it's fresh
-        console.log("Using cached data");
-        const cached = JSON.parse(cachedViews);
-        setBlogsWithViews(
-          blogs.map((blog) => ({
-            ...blog,
-            viewCount: cached[blog.id] || 0,
-            loading: false,
-          }))
-        );
-        return;
-      }
-    }
-
     // Fetch fresh data
+    console.log("Fetching fresh blog view counts...");
     const viewPromises = blogs.map(async (blog) => {
       try {
         const response = await fetch(`/api/views/${blog.id}`);
         if (response.ok) {
           const data = await response.json();
+          console.log(`Blog ${blog.id} (${blog.slug}): ${data.views} views`);
           return { ...blog, viewCount: data.views, loading: false };
+        } else {
+          console.error(`Failed to fetch views for blog ${blog.id}: ${response.status}`);
         }
       } catch (error) {
         console.error(`Failed to fetch views for blog ${blog.id}:`, error);
@@ -50,14 +32,6 @@ export default function BlogsList() {
 
     const results = await Promise.all(viewPromises);
     setBlogsWithViews(results);
-
-    // Cache the results
-    const viewsCache: Record<number, number> = {};
-    results.forEach((blog) => {
-      viewsCache[blog.id] = blog.viewCount;
-    });
-    sessionStorage.setItem("blog_views_cache", JSON.stringify(viewsCache));
-    sessionStorage.setItem("blog_views_cache_time", Date.now().toString());
   });
 
   return (

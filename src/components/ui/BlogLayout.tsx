@@ -17,65 +17,34 @@ const BlogLayout: Component<{
   onMount(async () => {
     try {
       const viewedKey = `blog_viewed_${props.id}`;
-      const cachedCountKey = `blog_count_${props.id}`;
-      const cacheTimestampKey = `blog_count_time_${props.id}`;
-      const CACHE_DURATION = 60_000 * 30; // 30 minutes in milliseconds
-
-      // Check if we have a cached count
-      const cachedCount = sessionStorage.getItem(cachedCountKey);
-      const cacheTimestamp = sessionStorage.getItem(cacheTimestampKey);
-
-      if (cachedCount && cacheTimestamp) {
-        const age = Date.now() - parseInt(cacheTimestamp, 10);
-        if (age < CACHE_DURATION) {
-          // Use cached count
-          setViews(parseInt(cachedCount, 10));
-          setLoading(false);
-
-          // Still check if we need to increment (but don't wait for it)
-          const hasViewed = sessionStorage.getItem(viewedKey);
-          if (!hasViewed) {
-            fetch(`/api/views/${props.id}`, { method: "POST" })
-              .then((res) => res.json())
-              .then((data) => {
-                setViews(data.views);
-                sessionStorage.setItem(viewedKey, "true");
-                sessionStorage.setItem(cachedCountKey, data.views.toString());
-                sessionStorage.setItem(
-                  cacheTimestampKey,
-                  Date.now().toString()
-                );
-              });
-          }
-          return;
-        }
-      }
-
       const hasViewed = sessionStorage.getItem(viewedKey);
 
       if (hasViewed) {
         // Already viewed in this session, just fetch the count
+        console.log(`Fetching view count for blog ${props.id} (already viewed)`);
         const response = await fetch(`/api/views/${props.id}`);
         if (response.ok) {
           const data = await response.json();
+          console.log(`Got view count for blog ${props.id}:`, data.views);
           setViews(data.views);
-          // Update cache
-          sessionStorage.setItem(cachedCountKey, data.views.toString());
-          sessionStorage.setItem(cacheTimestampKey, Date.now().toString());
+        } else {
+          console.error(`Failed to fetch views for blog ${props.id}:`, response.status);
         }
       } else {
         // First view in this session, increment the count
+        console.log(`Incrementing view count for blog ${props.id} (first view)`);
         const response = await fetch(`/api/views/${props.id}`, {
           method: "POST",
         });
 
         if (response.ok) {
           const data = await response.json();
+          console.log(`Incremented view count for blog ${props.id}:`, data.views);
           setViews(data.views);
-          // Mark as viewed and cache the count
+          // Mark as viewed in this session
           sessionStorage.setItem(viewedKey, "true");
-          sessionStorage.setItem(cachedCountKey, data.views.toString());
-          sessionStorage.setItem(cacheTimestampKey, Date.now().toString());
+        } else {
+          console.error(`Failed to increment views for blog ${props.id}:`, response.status);
         }
       }
     } catch (error) {
