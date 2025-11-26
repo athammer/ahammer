@@ -44,6 +44,12 @@ export async function GET({ params }: APIEvent) {
   try {
     // Check if Upstash is configured
     if (!UPSTASH_REDIS_REST_URL || !UPSTASH_REDIS_REST_TOKEN) {
+      console.error(
+        "Upstash credentials not configured! URL:",
+        UPSTASH_REDIS_REST_URL ? "SET" : "MISSING",
+        "TOKEN:",
+        UPSTASH_REDIS_REST_TOKEN ? "SET" : "MISSING"
+      );
       // Fallback for local development without Upstash configured
       return new Response(JSON.stringify({ id, views: 0 }), {
         status: 200,
@@ -52,8 +58,10 @@ export async function GET({ params }: APIEvent) {
     }
 
     const key = `blog:id:${id}`;
+    console.log(`Fetching view count for key: ${key}`);
     const result = await upstashRequest(["GET", key]);
     const viewCount = result.result ? parseInt(result.result, 10) : 0;
+    console.log(`View count for blog ${id}: ${viewCount}`);
 
     return new Response(JSON.stringify({ id, views: viewCount }), {
       status: 200,
@@ -84,6 +92,12 @@ export async function POST({ params }: APIEvent) {
   try {
     // Check if Upstash is configured
     if (!UPSTASH_REDIS_REST_URL || !UPSTASH_REDIS_REST_TOKEN) {
+      console.error(
+        "Upstash credentials not configured! URL:",
+        UPSTASH_REDIS_REST_URL ? "SET" : "MISSING",
+        "TOKEN:",
+        UPSTASH_REDIS_REST_TOKEN ? "SET" : "MISSING"
+      );
       // Fallback for local development without Upstash configured
       return new Response(JSON.stringify({ id, views: 1 }), {
         status: 200,
@@ -92,9 +106,11 @@ export async function POST({ params }: APIEvent) {
     }
 
     const key = `blog:id:${id}`;
+    console.log(`Incrementing view count for key: ${key}`);
     // Use INCR command to atomically increment the counter
     const result = await upstashRequest(["INCR", key]);
     const newViewCount = result.result;
+    console.log(`New view count for blog ${id}: ${newViewCount}`);
 
     return new Response(JSON.stringify({ id, views: newViewCount }), {
       status: 200,
