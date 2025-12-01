@@ -123,7 +123,7 @@ const BlogLayout: Component<{
             </div>
           </header>
 
-          <div class="text-lg leading-relaxed text-gray-700 space-y-6">
+          <div class="text-lg leading-relaxed text-gray-700 space-y-8">
             {props.children}
           </div>
 
