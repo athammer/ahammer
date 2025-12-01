@@ -8,13 +8,14 @@ const textVariants = cva("text-foreground", {
   variants: {
     variant: {
       default: "leading-relaxed md:leading-relaxed",
-      headerCta: "text-6xl font-semibold tracking-tight",
-      h1: "text-4xl font-extrabold tracking-tight lg:text-5xl",
-      h2: "text-3xl font-semibold tracking-tight",
-      h3: "text-2xl font-semibold tracking-tight",
-      h4: "text-xl font-semibold tracking-tight",
-      large: "text-lg font-semibold",
-      small: "text-sm font-medium leading-6",
+      headerCta: "text-6xl font-semibold tracking-tight font-merriweather",
+      h1: "text-4xl font-extrabold tracking-tight lg:text-5xl font-merriweather",
+      h2: "text-3xl font-semibold tracking-tight font-merriweather",
+      h3: "text-2xl font-semibold tracking-tight font-merriweather",
+      h4: "text-xl font-semibold tracking-tight font-merriweather",
+      large: "text-lg font-semibold font-merriweather",
+      small: "text-sm font-medium leading-6 font-poppins",
+      serif: "font-poppins text-lg leading-loose text-slate-700",
     },
     variantColor: {
       default: "text-gray-900",

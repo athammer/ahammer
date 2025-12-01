@@ -1,13 +1,15 @@
 import { APIEvent } from "@solidjs/start/server";
 
-const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
-const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
-
 /**
  * Helper function to make requests to Upstash Redis REST API
  */
 async function upstashRequest(command: string[]) {
+  const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
+  const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+
   if (!UPSTASH_REDIS_REST_URL || !UPSTASH_REDIS_REST_TOKEN) {
+    // Log available keys to debug production environment issues
+    console.error("Debug: Available env keys:", Object.keys(process.env));
     throw new Error("Upstash Redis credentials not configured");
   }
 
@@ -42,6 +44,9 @@ export async function GET({ params }: APIEvent) {
   }
 
   try {
+    const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
+    const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+
     // Check if Upstash is configured
     if (!UPSTASH_REDIS_REST_URL || !UPSTASH_REDIS_REST_TOKEN) {
       console.error(
@@ -50,6 +55,8 @@ export async function GET({ params }: APIEvent) {
         "TOKEN:",
         UPSTASH_REDIS_REST_TOKEN ? "SET" : "MISSING"
       );
+      console.error("Debug: Available env keys:", Object.keys(process.env));
+
       // Fallback for local development without Upstash configured
       return new Response(JSON.stringify({ id, views: 0 }), {
         status: 200,
@@ -90,6 +97,9 @@ export async function POST({ params }: APIEvent) {
   }
 
   try {
+    const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
+    const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+
     // Check if Upstash is configured
     if (!UPSTASH_REDIS_REST_URL || !UPSTASH_REDIS_REST_TOKEN) {
       console.error(
@@ -98,6 +108,8 @@ export async function POST({ params }: APIEvent) {
         "TOKEN:",
         UPSTASH_REDIS_REST_TOKEN ? "SET" : "MISSING"
       );
+      console.error("Debug: Available env keys:", Object.keys(process.env));
+
       // Fallback for local development without Upstash configured
       return new Response(JSON.stringify({ id, views: 1 }), {
         status: 200,

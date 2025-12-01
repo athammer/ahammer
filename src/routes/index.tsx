@@ -107,7 +107,7 @@ export default function Home() {
         </button>
       </div>
 
-      <main class="mx-auto max-w-5xl p-6 md:p-10 bg-white/80 backdrop-blur-md text-gray-800 shadow-xl ring-1 ring-gray-200 rounded-2xl space-y-10 my-4">
+      <main class="mx-auto max-w-5xl p-6 md:p-10 bg-white/80 backdrop-blur-md shadow-xl ring-1 ring-gray-200 rounded-2xl space-y-10 my-4">
         <section class="text-center mb-6">
           <Text variant="h1" class="mb-2">
             AARON TAYLOR HAMMER
@@ -135,24 +135,24 @@ export default function Home() {
 
         {/* Experience */}
         <section class="mt-8">
-          <Text variant="h2" class="mb-2 border-b border-gray-200 pb-1">
+          <Text variant="h2" class="mb-0 border-b border-gray-200 pb-1">
             Experience
           </Text>
 
           {/* Square – Block */}
           <div class="mt-4">
-            <Text variant="h3" class="mb-2">
+            <Text variant="h3" class="mb-0">
               Senior Full Stack Software Engineer
             </Text>
             <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-2">
+              <Text variant="small" variantColor="muted" class="mb-0">
                 Square / Block - Block, Stamford, CT - Remote
               </Text>
-              <Text variant="small" variantColor="muted" class="mb-2">
+              <Text variant="small" variantColor="muted" class="mb-0">
                 Oct&nbsp;2024 – Present
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
               <li>
                 <Text as="span">
                   Pitched and created the initial fullstack architecture for the
@@ -186,7 +186,7 @@ export default function Home() {
 
           {/* Square – Block (previous role) */}
           <div class="mt-6">
-            <Text variant="h3" class="mb-2">
+            <Text variant="h3" class="mb-0">
               Full Stack Software Engineer II
             </Text>
             <div class="flex justify-between">
@@ -197,7 +197,7 @@ export default function Home() {
                 Oct&nbsp;2022 – Oct&nbsp;2024
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
               <li>
                 <Text as="span">
                   Led several projects and owned the frontend for Square Payment
@@ -241,7 +241,7 @@ export default function Home() {
 
           {/* Rally Health */}
           <div class="mt-6">
-            <Text variant="h3" class="mb-2">
+            <Text variant="h3" class="mb-0">
               Full Stack Software Engineer II
             </Text>
             <div class="flex justify-between">
@@ -253,7 +253,7 @@ export default function Home() {
                 Jul&nbsp;2021 – Oct&nbsp;2022
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
               <li>
                 <Text as="span">
                   Contributed with an 8-person Scrum team to a React frontend
@@ -289,7 +289,7 @@ export default function Home() {
 
           {/* Clearview Social – Developer */}
           <div class="mt-6">
-            <Text variant="h3" class="mb-2">
+            <Text variant="h3" class="mb-0">
               Full Stack Software Developer
             </Text>
             <div class="flex justify-between">
@@ -300,7 +300,7 @@ export default function Home() {
                 Aug&nbsp;2019 – Jul&nbsp;2021
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
+            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
               <li>
                 <Text as="span">
                   Modeled and created the AWS infrastructure for a scalable
@@ -315,29 +315,36 @@ export default function Home() {
 
         {/* Projects */}
         <section class="mt-8">
-          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-2">
+          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-0">
             Projects
           </Text>
 
           {/* Where I'd Live */}
-          <div class="mt-4">
-            <div class="flex justify-between">
-              <Text variant="h3" class="mb-2">
+          <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
+            <Text variant="h3" class="mb-1 font-bold text-gray-900">
+              WhereIdLive
+            </Text>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+              <Text variant="small" class="text-gray-600 font-medium">
                 <a
                   href="https://whereidlive.com"
                   target="_blank"
                   class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
                 >
-                  WhereIdLive
+                  https://whereidlive.com
                 </a>
               </Text>
-              <Text variant="small" variantColor="muted" class="mt-1">
+              <Text
+                variant="small"
+                variantColor="muted"
+                class="text-gray-500 font-medium shrink-0"
+              >
                 Aug 2025 – Present
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500 text-gray-700 leading-relaxed md:leading-relaxed">
+            <ul class="list-disc pl-5 space-y-2 marker:text-blue-500">
               <li>
-                <Text as="span">
+                <Text as="span" variant="serif">
                   Viral application that lets users pick their living
                   preferences with 1m+ unique visits and 12m+ votes.
                 </Text>
@@ -348,11 +355,11 @@ export default function Home() {
 
         {/* Education */}
         <section class="mt-8">
-          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-2">
+          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-0">
             Education
           </Text>
           <div class="mt-4">
-            <Text variant="h3" class="mb-2">
+            <Text variant="h3" class="mb-0">
               Bachelor of Science in Computer Science
             </Text>
             <div class="flex justify-between">
@@ -368,24 +375,24 @@ export default function Home() {
 
         {/* Skills */}
         <section class="mt-8 mb-12">
-          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-2">
+          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-0">
             Skills
           </Text>
           <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Text variant="h4" class="mb-2">
+              <Text variant="h4" class="mb-0">
                 Language &amp; Frameworks
               </Text>
-              <Text class="leading-relaxed md:leading-relaxed">
+              <Text>
                 Javascript, Python, Typescript, Golang, PHP, React, React
                 Native, Vue, Node.js, Express.js, Next.js, SQL
               </Text>
             </div>
             <div>
-              <Text variant="h4" class="mb-2">
+              <Text variant="h4" class="mb-0">
                 Tools, Tech, Certs, &amp; Skills
               </Text>
-              <Text class="leading-relaxed md:leading-relaxed">
+              <Text>
                 DataDog, AWS, Terraform, Checkouts, Payments, Conversions
                 optimizations, Accessibility, Observability, Testing,
                 Maintenance and refactoring, Software design and architecture

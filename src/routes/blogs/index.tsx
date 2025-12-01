@@ -13,16 +13,16 @@ export default function BlogsList() {
 
   onMount(async () => {
     // Fetch fresh data
-    console.log("Fetching fresh blog view counts...");
     const viewPromises = blogs.map(async (blog) => {
       try {
         const response = await fetch(`/api/views/${blog.id}`);
         if (response.ok) {
           const data = await response.json();
-          console.log(`Blog ${blog.id} (${blog.slug}): ${data.views} views`);
           return { ...blog, viewCount: data.views, loading: false };
         } else {
-          console.error(`Failed to fetch views for blog ${blog.id}: ${response.status}`);
+          console.error(
+            `Failed to fetch views for blog ${blog.id}: ${response.status}`
+          );
         }
       } catch (error) {
         console.error(`Failed to fetch views for blog ${blog.id}:`, error);
@@ -85,23 +85,26 @@ export default function BlogsList() {
                         <li>
                           <a
                             href={`/blogs/${blog.slug}`}
-                            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-5 rounded-lg bg-white/80 shadow-sm hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                            class="group block p-1 rounded-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                             aria-label={`Read blog post: ${blog.title}`}
                           >
-                            <Text variant="h4" class="flex-1">
-                              {blog.title}
-                            </Text>
-                            <Text
-                              variant="small"
-                              variantColor="muted"
-                              class="whitespace-nowrap w-20 text-right"
-                            >
-                              {blog.loading ? (
-                                <span class="opacity-0">0 views</span>
-                              ) : (
-                                `${blog.viewCount.toLocaleString()} views`
-                              )}
-                            </Text>
+                            <article class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
+                              <Text
+                                variant="h4"
+                                class="flex-1 group-hover:text-blue-600 transition-colors"
+                              >
+                                {blog.title}
+                              </Text>
+                              <div class="flex items-center gap-4 text-sm text-gray-400 shrink-0">
+                                <span class="whitespace-nowrap">
+                                  {blog.loading ? (
+                                    <span class="opacity-0">0 views</span>
+                                  ) : (
+                                    `${blog.viewCount.toLocaleString()} views`
+                                  )}
+                                </span>
+                              </div>
+                            </article>
                           </a>
                         </li>
                       )}
