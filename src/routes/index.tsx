@@ -319,6 +319,39 @@ export default function Home() {
             Projects
           </Text>
 
+          {/* StationScreen */}
+          <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
+            <Text variant="h3" class="mb-1 font-bold text-gray-900">
+              StationScreen
+            </Text>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+              <Text variant="small" class="text-gray-600 font-medium">
+                <a
+                  href="https://stationscreen.com"
+                  target="_blank"
+                  class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
+                >
+                  https://stationscreen.com
+                </a>
+              </Text>
+              <Text
+                variant="small"
+                variantColor="muted"
+                class="text-gray-500 font-medium shrink-0"
+              >
+                Sep 2024 – Present
+              </Text>
+            </div>
+            <ul class="list-disc pl-5 space-y-2 marker:text-blue-500">
+              <li>
+                <Text as="span" variant="serif">
+                  A digital dashboard for your home that shows you the transit
+                  times such as buses, trains, and subways.
+                </Text>
+              </li>
+            </ul>
+          </div>
+
           {/* Where I'd Live */}
           <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
             <Text variant="h3" class="mb-1 font-bold text-gray-900">
