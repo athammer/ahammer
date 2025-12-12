@@ -163,9 +163,9 @@ export default function Home() {
               </li>
               <li>
                 <Text as="span" variant="serif">
-                  Ranked #1 in AI token usage while ensuring high-quality output
-                  through rigorous code reviews and precise model selection for
-                  specific tasks.
+                  Ranked #1 in Cursor AI token usage while ensuring high-quality
+                  output through rigorous code reviews and precise model
+                  selection for specific tasks.
                 </Text>
               </li>
               <li>
