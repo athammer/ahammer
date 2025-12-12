@@ -11,6 +11,7 @@ export default function CssGridArticle() {
       <BlogLayout
         title="Perfecting Alerts: Save Money, Sleep Better, and Watch Your Back"
         date="July 16, 2025"
+        lastEdited="Dec 3, 2025"
         id={0}
       >
         <Text>
@@ -22,7 +23,7 @@ export default function CssGridArticle() {
           Let’s dig into that.
         </Text>
 
-        <div class="space-y-2">
+        <div class="space-y-4">
           <Text variant="h2">What to measure?</Text>
           <Text>
             We are far from creating our first alert. The worst thing you can do
@@ -32,7 +33,7 @@ export default function CssGridArticle() {
           </Text>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-4">
           <Text variant="h3">Finding your “Jobs to be Done” JTBD</Text>
           <Text>
             With every application, such as Stripe Payment Links, there are
@@ -52,7 +53,7 @@ export default function CssGridArticle() {
           </Text>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-4">
           <Text variant="h3">What makes you tick?</Text>
           <Text>
             Each JTBD will most likely include several critical steps that are
@@ -104,7 +105,7 @@ export default function CssGridArticle() {
           </Text>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-4">
           <Text variant="h4">Dependency tracking (bonus section!)</Text>
           <Text>
             Each step will have a myriad of dependencies. Keep track of them and
@@ -117,7 +118,7 @@ export default function CssGridArticle() {
           </Text>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-4">
           <Text variant="h3">Finally, SLOs</Text>
           <Text>
             We have the JTBD and the critical steps to fulfill that job. To
@@ -152,7 +153,7 @@ export default function CssGridArticle() {
           </Text>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-4">
           <Text variant="h2">The hard part: How to alert</Text>
           <Text>todo</Text>
         </div>

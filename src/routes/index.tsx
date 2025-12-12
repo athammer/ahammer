@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
               <li>
-                <Text as="span">
+                <Text as="span" variant="serif">
                   Pitched and created the initial fullstack architecture for the
                   Block Checkout Platform which was created to unify all
                   checkouts that total $35 billion in yearly GPV spanning 8
@@ -162,7 +162,14 @@ export default function Home() {
                 </Text>
               </li>
               <li>
-                <Text as="span">
+                <Text as="span" variant="serif">
+                  Ranked #1 in AI token usage while ensuring high-quality output
+                  through rigorous code reviews and precise model selection for
+                  specific tasks.
+                </Text>
+              </li>
+              <li>
+                <Text as="span" variant="serif">
                   Architectured the frontend engineering designs and led a small
                   team of 3 to implement Order with Google and Google Business
                   Profile syncing for all Square and Cash App sellers in React

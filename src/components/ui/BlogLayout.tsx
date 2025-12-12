@@ -9,6 +9,7 @@ const BlogLayout: Component<{
   children: JSX.Element;
   title: string;
   date: string;
+  lastEdited?: string;
   id: number;
 }> = (props) => {
   const [views, setViews] = createSignal(0);
@@ -120,6 +121,12 @@ const BlogLayout: Component<{
               <span>
                 {loading() ? "..." : `${views().toLocaleString()} views`}
               </span>
+              {props.lastEdited && (
+                <>
+                  <span>•</span>
+                  <span>Updated {props.lastEdited}</span>
+                </>
+              )}
             </div>
           </header>
 
