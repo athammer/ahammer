@@ -15,7 +15,7 @@ const textVariants = cva("text-foreground", {
       h4: "text-xl font-semibold tracking-tight font-merriweather",
       large: "text-lg font-semibold font-merriweather",
       small: "text-sm font-medium leading-6 font-poppins",
-      serif: "font-poppins text-lg leading-loose text-slate-700",
+      serif: "font-poppins text-base leading-relaxed text-slate-700",
     },
     variantColor: {
       default: "text-gray-900",
