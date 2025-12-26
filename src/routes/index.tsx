@@ -326,6 +326,39 @@ export default function Home() {
             Projects
           </Text>
 
+          {/* PlacePixels */}
+          <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
+            <Text variant="h3" class="mb-1 font-bold text-gray-900">
+              PlacePixels
+            </Text>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
+              <Text variant="small" class="text-gray-600 font-medium">
+                <a
+                  href="https://placepixels.com"
+                  target="_blank"
+                  class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
+                >
+                  https://placepixels.com
+                </a>
+              </Text>
+              <Text
+                variant="small"
+                variantColor="muted"
+                class="text-gray-500 font-medium shrink-0"
+              >
+                Jan 2025 – Present
+              </Text>
+            </div>
+            <ul class="list-disc pl-5 space-y-2 marker:text-blue-500">
+              <li>
+                <Text as="span" variant="serif">
+                  A modern r/place alternative where communities can create
+                  pixel art together in real-time.
+                </Text>
+              </li>
+            </ul>
+          </div>
+
           {/* StationScreen */}
           <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
             <Text variant="h3" class="mb-1 font-bold text-gray-900">
