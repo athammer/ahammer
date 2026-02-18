@@ -100,75 +100,76 @@ const BlogLayout: Component<{
         style={{ transform: `scaleX(${progress()})` }}
       />
 
-      <main class="mx-auto max-w-3xl px-6 py-12 md:py-16 text-gray-800">
-        <article ref={articleRef} class={cn("space-y-8")}>
-          <header class="text-center space-y-6 mb-12">
-            <Text
-              variant="small"
-              class="font-bold tracking-widest uppercase text-blue-600"
-            >
-              {props.date}
-            </Text>
-            <Text
-              variant="h1"
-              class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-gray-900"
-            >
-              {props.title}
-            </Text>
-            <div class="flex items-center justify-center gap-3 text-gray-500 text-sm font-medium">
-              <span>{readTime()} min read</span>
-              <span>•</span>
-              <span>
-                {loading() ? "..." : `${views().toLocaleString()} views`}
-              </span>
-              {props.lastEdited && (
-                <>
-                  <span>•</span>
-                  <span>Updated {props.lastEdited}</span>
-                </>
-              )}
-            </div>
-          </header>
-
-          <div class="text-lg leading-relaxed text-gray-700 space-y-8">
-            {props.children}
-          </div>
-
-          <footer class="mt-16 pt-10 border-t border-gray-200">
-            <div class="bg-gray-50 rounded-2xl p-8 text-center space-y-4 border border-gray-100">
-              <Text variant="h4">Thanks for reading!</Text>
-              <Text variant="small" variantColor="muted">
-                If you enjoyed this post, feel free to share it.
+      <main class="mx-auto max-w-3xl my-4">
+        <div class="bg-white shadow-sm ring-1 ring-gray-200 rounded-2xl px-6 py-10 md:px-12 md:py-14">
+          <article ref={articleRef} class={cn("space-y-8")}>
+            <header class="text-center space-y-4 pb-8 border-b border-gray-100">
+              <Text
+                variant="small"
+                class="font-semibold tracking-widest uppercase text-gray-400"
+              >
+                {props.date}
               </Text>
-              <div class="flex justify-center gap-4 pt-2">
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(window.location.href);
-                    alert("Link copied to clipboard!");
-                  }}
-                  class="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm cursor-pointer"
-                >
-                  Copy Link
-                </button>
-                <button
-                  onClick={() => {
-                    const url = window.location.href;
-                    const text = props.title;
-                    window.open(
-                      `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                        text
-                      )}&url=${encodeURIComponent(url)}`,
-                      "_blank"
-                    );
-                  }}
-                  class="px-5 py-2.5 bg-black text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-all shadow-sm cursor-pointer"
-                >
-                  Share on X
-                </button>
+              <Text
+                variant="h1"
+                class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight"
+              >
+                {props.title}
+              </Text>
+              <div class="flex items-center justify-center gap-3 text-gray-400 text-sm font-medium font-poppins">
+                <span>{readTime()} min read</span>
+                <span>·</span>
+                <span>
+                  {loading() ? "..." : `${views().toLocaleString()} views`}
+                </span>
+                {props.lastEdited && (
+                  <>
+                    <span>·</span>
+                    <span>Updated {props.lastEdited}</span>
+                  </>
+                )}
               </div>
+            </header>
+
+            <div class="text-base leading-relaxed text-gray-700 space-y-6">
+              {props.children}
             </div>
-          </footer>
-        </article>
+
+            <footer class="pt-8 border-t border-gray-100">
+              <div class="text-center space-y-4">
+                <Text variant="small" variantColor="muted">
+                  Enjoyed this post? Share it.
+                </Text>
+                <div class="flex justify-center gap-3">
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(window.location.href);
+                      alert("Link copied to clipboard!");
+                    }}
+                    class="px-4 py-2 border border-gray-300 bg-white rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition cursor-pointer"
+                  >
+                    Copy Link
+                  </button>
+                  <button
+                    onClick={() => {
+                      const url = window.location.href;
+                      const text = props.title;
+                      window.open(
+                        `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                          text
+                        )}&url=${encodeURIComponent(url)}`,
+                        "_blank"
+                      );
+                    }}
+                    class="px-4 py-2 bg-gray-900 text-white rounded-md text-sm font-medium hover:bg-gray-700 transition cursor-pointer"
+                  >
+                    Share on X
+                  </button>
+                </div>
+              </div>
+            </footer>
+          </article>
+        </div>
       </main>
     </>
   );

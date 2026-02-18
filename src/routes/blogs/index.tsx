@@ -41,79 +41,71 @@ export default function BlogsList() {
         name="description"
         content="Technical blog posts by Aaron Hammer on software engineering, full stack development, alerts, observability, and building scalable systems."
       />
-      <main class="mx-auto max-w-3xl p-6 md:p-10 text-gray-800 space-y-6">
-        <header class="text-center">
-          <Text variant="h1" class="mb-2">
-            Blogs
-          </Text>
-          <Text variant="small" variantColor="muted">
-            random thoughts random blogs
-          </Text>
-          <Text variant="small" variantColor="muted">
-            sorry blogs are still a work in progress :(
-          </Text>
-        </header>
+      <main class="mx-auto max-w-3xl my-4">
+        <div class="bg-white shadow-sm ring-1 ring-gray-200 rounded-2xl p-6 md:p-10">
+          <header class="text-center pb-6 border-b border-gray-100 mb-8">
+            <Text variant="h1" class="mb-2">
+              Blogs
+            </Text>
+            <Text variant="small" variantColor="muted" class="mb-0">
+              random thoughts, random blogs
+            </Text>
+          </header>
 
-        {/* Group blogs by year */}
-        <ul class="space-y-8">
-          {Object.keys(
-            blogsWithViews().reduce(
-              (acc: Record<number, BlogWithViews[]>, blog) => {
-                (acc[blog.year] ||= []).push(blog);
-                return acc;
-              },
-              {}
+          {/* Group blogs by year */}
+          <ul class="space-y-8">
+            {Object.keys(
+              blogsWithViews().reduce(
+                (acc: Record<number, BlogWithViews[]>, blog) => {
+                  (acc[blog.year] ||= []).push(blog);
+                  return acc;
+                },
+                {}
+              )
             )
-          )
-            .sort((a, b) => Number(b) - Number(a))
-            .map((year) => {
-              const yearBlogs = blogsWithViews().filter(
-                (b) => b.year === Number(year)
-              );
-              return (
-                <li>
-                  <Text
-                    variant="large"
-                    variantColor="secondary"
-                    class="mb-2 pl-1 tracking-wide uppercase"
-                  >
-                    {year}
-                  </Text>
-                  <ul class="space-y-4">
-                    <For each={yearBlogs}>
-                      {(blog) => (
-                        <li>
-                          <a
-                            href={`/blogs/${blog.slug}`}
-                            class="group block p-1 rounded-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-                            aria-label={`Read blog post: ${blog.title}`}
-                          >
-                            <article class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                              <Text
-                                variant="h4"
-                                class="flex-1 group-hover:text-blue-600 transition-colors"
-                              >
+              .sort((a, b) => Number(b) - Number(a))
+              .map((year) => {
+                const yearBlogs = blogsWithViews().filter(
+                  (b) => b.year === Number(year)
+                );
+                return (
+                  <li>
+                    <Text
+                      variant="small"
+                      variantColor="muted"
+                      class="mb-3 tracking-widest uppercase font-semibold"
+                    >
+                      {year}
+                    </Text>
+                    <ul class="space-y-1">
+                      <For each={yearBlogs}>
+                        {(blog) => (
+                          <li>
+                            <a
+                              href={`/blogs/${blog.slug}`}
+                              class="group flex items-baseline justify-between gap-6 py-2.5 border-b border-gray-100 last:border-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                              aria-label={`Read blog post: ${blog.title}`}
+                            >
+                              <span class="font-poppins text-base text-gray-800 group-hover:text-blue-600 transition-colors">
                                 {blog.title}
-                              </Text>
-                              <div class="flex items-center gap-4 text-sm text-gray-400 shrink-0">
-                                <span class="whitespace-nowrap">
-                                  {blog.loading ? (
-                                    <span class="opacity-0">0 views</span>
-                                  ) : (
-                                    `${blog.viewCount.toLocaleString()} views`
-                                  )}
-                                </span>
-                              </div>
-                            </article>
-                          </a>
-                        </li>
-                      )}
-                    </For>
-                  </ul>
-                </li>
-              );
-            })}
-        </ul>
+                              </span>
+                              <span class="text-sm text-gray-400 shrink-0 whitespace-nowrap">
+                                {blog.loading ? (
+                                  <span class="opacity-0">0 views</span>
+                                ) : (
+                                  `${blog.viewCount.toLocaleString()} views`
+                                )}
+                              </span>
+                            </a>
+                          </li>
+                        )}
+                      </For>
+                    </ul>
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
       </main>
     </>
   );
