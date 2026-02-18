@@ -8,7 +8,7 @@ export default function Nav() {
       ? "border-sky-600"
       : "border-transparent hover:border-sky-600";
   return (
-    <header class="bg-white shadow">
+    <header class="border-b border-stone-200">
       <nav class="container mx-auto flex flex-wrap items-center justify-between p-4 text-gray-700">
         <div class="text-lg font-semibold">
           <TextLink href="/" variantColor="default" class="hover:text-sky-600">

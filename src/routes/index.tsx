@@ -59,12 +59,12 @@ export default function Home() {
         })}
       </script>
 
-      {/* Resume download button */}
-      <div class="mx-auto max-w-5xl flex flex-col sm:flex-row gap-4 items-center justify-center sm:justify-end mt-4">
+      {/* Action buttons */}
+      <div class="mx-auto max-w-5xl flex flex-col sm:flex-row gap-2 items-center justify-center sm:justify-end mt-4">
         <a
           href="https://drive.google.com/file/d/13irV_bCwpUlnL_n8AYRJ84Jogidl0dkF/view?usp=sharing"
           target="_blank"
-          class="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-2 text-sm md:text-base font-semibold text-white shadow-lg transition hover:from-sky-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          class="inline-flex items-center gap-2 rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ export default function Home() {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="h-5 w-5"
+            class="h-4 w-4"
           >
             <path
               stroke-linecap="round"
@@ -85,34 +85,33 @@ export default function Home() {
         <a
           href="https://twitter.com/ahammer__"
           target="_blank"
-          class="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-2 text-sm md:text-base font-semibold text-white shadow-lg transition hover:from-blue-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          class="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
             viewBox="0 0 24 24"
-            class="h-5 w-5"
+            class="h-4 w-4"
           >
             <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
           </svg>
           Twitter
         </a>
-
         <button
           type="button"
-          class="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-pink-500 to-fuchsia-500 px-4 py-2 text-sm md:text-base font-semibold text-white shadow-lg transition hover:from-pink-600 hover:to-fuchsia-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 cursor-pointer"
+          class="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 cursor-pointer"
           onClick={handleRandomBlog}
         >
           Random Blog
         </button>
       </div>
 
-      <main class="mx-auto max-w-5xl p-6 md:p-10 bg-white/80 backdrop-blur-md shadow-xl ring-1 ring-gray-200 rounded-2xl space-y-10 my-4">
-        <section class="text-center mb-6">
+      <main class="mx-auto max-w-5xl p-6 md:p-10 bg-white shadow-sm ring-1 ring-gray-200 rounded-2xl my-4">
+        <section class="text-center pb-8 border-b border-gray-100">
           <Text variant="h1" class="mb-2">
             AARON TAYLOR HAMMER
           </Text>
-          <Text variant="small" variantColor="muted" class="mb-4">
+          <Text variant="small" variantColor="muted" class="mb-0 tracking-wide">
             aaron@athammer.me · Stamford, CT
             <span> · </span>
             <TextLink
@@ -134,31 +133,31 @@ export default function Home() {
         </section>
 
         {/* Experience */}
-        <section class="mt-8">
-          <Text variant="h2" class="mb-0 border-b border-gray-200 pb-1">
+        <section class="pt-6">
+          <Text variant="h2" class="mb-4 border-b border-gray-200 pb-2">
             Experience
           </Text>
 
           {/* Square – Block */}
-          <div class="mt-4">
-            <Text variant="h3" class="mb-0">
-              Senior Full Stack Software Engineer
-            </Text>
-            <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-0">
-                Square / Block - Block, Stamford, CT - Remote
+          <div class="mt-2">
+            <div class="flex justify-between items-baseline">
+              <Text variant="h3" class="mb-0">
+                Senior Full Stack Software Engineer
               </Text>
-              <Text variant="small" variantColor="muted" class="mb-0">
+              <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
                 Oct&nbsp;2024 – Present
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
+            <Text variant="small" variantColor="muted" class="mb-2 mt-0.5">
+              Square / Block, Stamford, CT — Remote
+            </Text>
+            <ul class="list-disc pl-5 mt-3 space-y-1.5 marker:text-blue-500">
               <li>
                 <Text as="span" variant="serif">
                   Pitched and created the initial fullstack architecture for the
-                  Block Checkout Platform which was created to unify all
-                  checkouts that total $35 billion in yearly GPV spanning 8
-                  teams across Cash App and Square.
+                  Block Checkout Platform to unify all checkouts totaling $35
+                  billion in yearly GPV spanning 8 teams across Cash App and
+                  Square.
                 </Text>
               </li>
               <li>
@@ -170,150 +169,153 @@ export default function Home() {
               </li>
               <li>
                 <Text as="span" variant="serif">
-                  Architectured the frontend engineering designs and led a small
-                  team of 3 to implement Order with Google and Google Business
-                  Profile syncing for all Square and Cash App sellers in React
-                  and Typescript.
+                  Created, led a team of 3, and planned the frontend for Order
+                  with Google and Google Business Profile syncing for all Square
+                  and Cash App sellers, with our integration driving 24% of all
+                  online profile traffic.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Led a team of 6 engineers for a rapid prototyping to prove out
-                  Square's agentic commerce capabilities.
+                <Text as="span" variant="serif">
+                  Led a team of 6 engineers to rapidly prototype Square's
+                  agentic AI commerce capabilities for Vercel's V0 team and
+                  Square leadership, proving out viability of the platform.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  With a team of 2 other engineers we quickly brought Square's
-                  ecommerce checkouts in EAA's accessibility compliance
+                <Text as="span" variant="serif">
+                  With a team of 2 other engineers, brought Square's ecommerce
+                  checkouts into EAA accessibility compliance before regulatory
+                  deadlines.
                 </Text>
               </li>
             </ul>
           </div>
 
           {/* Square – Block (previous role) */}
-          <div class="mt-6">
-            <Text variant="h3" class="mb-0">
-              Full Stack Software Engineer II
-            </Text>
-            <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-2">
-                Square / Block - Block, Denver, CO - Remote
+          <div class="mt-7">
+            <div class="flex justify-between items-baseline">
+              <Text variant="h3" class="mb-0">
+                Full Stack Software Engineer II
               </Text>
-              <Text variant="small" variantColor="muted" class="mb-2">
+              <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
                 Oct&nbsp;2022 – Oct&nbsp;2024
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
+            <Text variant="small" variantColor="muted" class="mb-2 mt-0.5">
+              Square / Block, Denver, CO — Remote
+            </Text>
+            <ul class="list-disc pl-5 mt-3 space-y-1.5 marker:text-blue-500">
               <li>
-                <Text as="span">
+                <Text as="span" variant="serif">
                   Led several projects and owned the frontend for Square Payment
-                  Links on a 9-person team using Golang, PHP, Typescript, and
-                  Vue that managed over $4+ billion in processing volume,
-                  growing 62% YoY for 2024.
+                  Links on a 9-person team using Golang, PHP, TypeScript, and
+                  Vue — managing over $4B in processing volume, growing 62% YoY
+                  for 2024.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Rebuilt Square Payment Link's tipping feature to let over 1
-                  million sellers customize tip percentages, support their local
-                  currencies, and to provide more localized tipping percentages
-                  as defaults.
+                <Text as="span" variant="serif">
+                  Rebuilt Square Payment Links' tipping feature to let over 1
+                  million sellers customize tip percentages, support local
+                  currencies, and provide more localized tipping defaults.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Drove our code red for reliability, created and owned our
-                  observability documentation and stack in Datadog, and wrote up
-                  and led a 90-day plan to get all our SLOs from failing to
-                  99.995% at the end of our initiative.
+                <Text as="span" variant="serif">
+                  Drove a reliability code red: created and owned our
+                  observability stack in Datadog and led a 90-day plan to bring
+                  all SLOs from failing to 99.995%.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Led the migration of our Payment Links' services from on-prem
-                  to AWS infrastructure using Terraform.
+                <Text as="span" variant="serif">
+                  Led the migration of Payment Links services from on-prem to
+                  AWS infrastructure using Terraform.
                 </Text>
               </li>
               <li>
-                <Text as="span">
+                <Text as="span" variant="serif">
+                  On my own initiative, investigated bot traffic inflating
+                  Datadog RUM costs and filtered them out, reducing spend by
+                  $28k/month — 10% of my org's bill and 2% of Block's total
+                  usage.
+                </Text>
+              </li>
+              <li>
+                <Text as="span" variant="serif">
                   Created the buyer-side frontend for Square's restaurant QR
-                  code checkout experience, visited restaurants during to offer
-                  help, and unlocked over $70 million in processing volume for
-                  Square Payment Links' MoM.
+                  code checkout experience and unlocked over $70M in processing
+                  volume for Square Payment Links MoM.
                 </Text>
               </li>
             </ul>
           </div>
 
           {/* Rally Health */}
-          <div class="mt-6">
-            <Text variant="h3" class="mb-0">
-              Full Stack Software Engineer II
-            </Text>
-            <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-2">
-                Formerly Rally Health - Optum Digital / UnitedHealth Group,
-                Denver, CO - Remote
+          <div class="mt-7">
+            <div class="flex justify-between items-baseline">
+              <Text variant="h3" class="mb-0">
+                Full Stack Software Engineer II
               </Text>
-              <Text variant="small" variantColor="muted" class="mb-2">
+              <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
                 Jul&nbsp;2021 – Oct&nbsp;2022
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
+            <Text variant="small" variantColor="muted" class="mb-2 mt-0.5">
+              Formerly Rally Health — Optum Digital / UnitedHealth Group, Denver, CO — Remote
+            </Text>
+            <ul class="list-disc pl-5 mt-3 space-y-1.5 marker:text-blue-500">
               <li>
-                <Text as="span">
+                <Text as="span" variant="serif">
                   Contributed with an 8-person Scrum team to a React frontend
                   and Scala microservice backend for the UHC healthcare client
-                  dashboard landing page that's accessed by over 50+ million
-                  customers worldwide.
+                  dashboard, accessed by 50M+ customers worldwide.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Led and rapidly implemented the frontend requirements for a
-                  SSO redirect on myUHC to enable over 26 million customers to
-                  receive free COVID-19 tests by week's end to comply with
-                  federal mandates.
+                <Text as="span" variant="serif">
+                  Led rapid frontend implementation of an SSO redirect on myUHC
+                  enabling 26M+ customers to receive free COVID-19 tests within
+                  a week to meet federal mandates.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Drove a performance initiative to improve UX. I reduced our
-                  max bundle from 1.62MBs to 495KBs and slashed FCP by 0.4
-                  seconds through lazy-loading, bundle-splitting and concurrent
-                  rendering.
+                <Text as="span" variant="serif">
+                  Drove a performance initiative reducing the max bundle from
+                  1.62MB to 495KB and cutting FCP by 0.4s via lazy-loading,
+                  bundle-splitting, and concurrent rendering.
                 </Text>
               </li>
               <li>
-                <Text as="span">
-                  Contributed with a dedicated team to migrate the client
-                  dashboard, myUHC, from AngularJS to ReactJS
+                <Text as="span" variant="serif">
+                  Migrated the myUHC client dashboard from AngularJS to ReactJS
+                  with a dedicated team.
                 </Text>
               </li>
             </ul>
           </div>
 
           {/* Clearview Social – Developer */}
-          <div class="mt-6">
-            <Text variant="h3" class="mb-0">
-              Full Stack Software Developer
-            </Text>
-            <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-2">
-                Clearview Social, Denver, CO - Remote
+          <div class="mt-7">
+            <div class="flex justify-between items-baseline">
+              <Text variant="h3" class="mb-0">
+                Full Stack Software Developer
               </Text>
-              <Text variant="small" variantColor="muted" class="mb-2">
+              <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
                 Aug&nbsp;2019 – Jul&nbsp;2021
               </Text>
             </div>
-            <ul class="list-disc pl-5 mt-2 space-y-2 marker:text-blue-500">
+            <Text variant="small" variantColor="muted" class="mb-2 mt-0.5">
+              Clearview Social, Denver, CO — Remote
+            </Text>
+            <ul class="list-disc pl-5 mt-3 space-y-1.5 marker:text-blue-500">
               <li>
-                <Text as="span">
-                  Modeled and created the AWS infrastructure for a scalable
-                  serverless image caching API that returns images in a
-                  specified size and image format while caching alternative
-                  formats. Image transfer size dropped 50%+.
+                <Text as="span" variant="serif">
+                  Modeled and built AWS infrastructure for a scalable serverless
+                  image caching API that returns images in specified sizes and
+                  formats while caching alternatives, cutting image transfer
+                  size by 50%+.
                 </Text>
               </li>
             </ul>
@@ -321,154 +323,144 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section class="mt-8">
-          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-0">
+        <section class="pt-8 border-t border-gray-100">
+          <Text variant="h2" class="mb-4 border-b border-gray-200 pb-2">
             Projects
           </Text>
 
-          {/* PlacePixels */}
-          <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
-            <Text variant="h3" class="mb-1 font-bold text-gray-900">
-              PlacePixels
-            </Text>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-              <Text variant="small" class="text-gray-600 font-medium">
+          <div class="space-y-5">
+            {/* PlacePixels */}
+            <div>
+              <div class="flex justify-between items-baseline">
+                <Text variant="h3" class="mb-0">
+                  PlacePixels
+                </Text>
+                <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
+                  Jan 2025 – Present
+                </Text>
+              </div>
+              <Text variant="small" class="mb-2 mt-0.5">
                 <a
                   href="https://placepixels.com"
                   target="_blank"
-                  class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
+                  class="text-blue-500 hover:text-blue-600 transition-colors"
                 >
-                  https://placepixels.com
+                  placepixels.com
                 </a>
               </Text>
-              <Text
-                variant="small"
-                variantColor="muted"
-                class="text-gray-500 font-medium shrink-0"
-              >
-                Jan 2025 – Present
-              </Text>
+              <ul class="list-disc pl-5 space-y-1.5 marker:text-blue-500">
+                <li>
+                  <Text as="span" variant="serif">
+                    A modern r/place alternative where communities can create
+                    pixel art together in real-time.
+                  </Text>
+                </li>
+              </ul>
             </div>
-            <ul class="list-disc pl-5 space-y-2 marker:text-blue-500">
-              <li>
-                <Text as="span" variant="serif">
-                  A modern r/place alternative where communities can create
-                  pixel art together in real-time.
-                </Text>
-              </li>
-            </ul>
-          </div>
 
-          {/* StationScreen */}
-          <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
-            <Text variant="h3" class="mb-1 font-bold text-gray-900">
-              StationScreen
-            </Text>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-              <Text variant="small" class="text-gray-600 font-medium">
+            {/* StationScreen */}
+            <div>
+              <div class="flex justify-between items-baseline">
+                <Text variant="h3" class="mb-0">
+                  StationScreen
+                </Text>
+                <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
+                  Sep 2024 – Present
+                </Text>
+              </div>
+              <Text variant="small" class="mb-2 mt-0.5">
                 <a
                   href="https://stationscreen.com"
                   target="_blank"
-                  class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
+                  class="text-blue-500 hover:text-blue-600 transition-colors"
                 >
-                  https://stationscreen.com
+                  stationscreen.com
                 </a>
               </Text>
-              <Text
-                variant="small"
-                variantColor="muted"
-                class="text-gray-500 font-medium shrink-0"
-              >
-                Sep 2024 – Present
-              </Text>
+              <ul class="list-disc pl-5 space-y-1.5 marker:text-blue-500">
+                <li>
+                  <Text as="span" variant="serif">
+                    A digital dashboard for your home showing real-time transit
+                    times for buses, trains, and subways.
+                  </Text>
+                </li>
+              </ul>
             </div>
-            <ul class="list-disc pl-5 space-y-2 marker:text-blue-500">
-              <li>
-                <Text as="span" variant="serif">
-                  A digital dashboard for your home that shows you the transit
-                  times such as buses, trains, and subways.
-                </Text>
-              </li>
-            </ul>
-          </div>
 
-          {/* Where I'd Live */}
-          <div class="group rounded-xl p-4 -mx-4 transition-colors hover:bg-gray-50/50">
-            <Text variant="h3" class="mb-1 font-bold text-gray-900">
-              WhereIdLive
-            </Text>
-            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-3">
-              <Text variant="small" class="text-gray-600 font-medium">
+            {/* WhereIdLive */}
+            <div>
+              <div class="flex justify-between items-baseline">
+                <Text variant="h3" class="mb-0">
+                  WhereIdLive
+                </Text>
+                <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
+                  Aug 2025 – Present
+                </Text>
+              </div>
+              <Text variant="small" class="mb-2 mt-0.5">
                 <a
                   href="https://whereidlive.com"
                   target="_blank"
-                  class="underline decoration-blue-500 decoration-2 underline-offset-4 hover:text-blue-600"
+                  class="text-blue-500 hover:text-blue-600 transition-colors"
                 >
-                  https://whereidlive.com
+                  whereidlive.com
                 </a>
               </Text>
-              <Text
-                variant="small"
-                variantColor="muted"
-                class="text-gray-500 font-medium shrink-0"
-              >
-                Aug 2025 – Present
-              </Text>
+              <ul class="list-disc pl-5 space-y-1.5 marker:text-blue-500">
+                <li>
+                  <Text as="span" variant="serif">
+                    Viral app that lets users pick their living preferences —
+                    1M+ unique visits and 12M+ votes.
+                  </Text>
+                </li>
+              </ul>
             </div>
-            <ul class="list-disc pl-5 space-y-2 marker:text-blue-500">
-              <li>
-                <Text as="span" variant="serif">
-                  Viral application that lets users pick their living
-                  preferences with 1m+ unique visits and 12m+ votes.
-                </Text>
-              </li>
-            </ul>
           </div>
         </section>
 
         {/* Education */}
-        <section class="mt-8">
-          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-0">
+        <section class="pt-8 border-t border-gray-100">
+          <Text variant="h2" class="mb-4 border-b border-gray-200 pb-2">
             Education
           </Text>
-          <div class="mt-4">
-            <Text variant="h3" class="mb-0">
-              Bachelor of Science in Computer Science
-            </Text>
-            <div class="flex justify-between">
-              <Text variant="small" variantColor="muted" class="mb-2">
-                University of Buffalo, Buffalo, NY
+          <div>
+            <div class="flex justify-between items-baseline">
+              <Text variant="h3" class="mb-0">
+                Bachelor of Science in Computer Science
               </Text>
-              <Text variant="small" variantColor="muted" class="mb-2">
+              <Text variant="small" variantColor="muted" class="mb-0 shrink-0 ml-4">
                 Aug&nbsp;2015 – Aug&nbsp;2019
               </Text>
             </div>
+            <Text variant="small" variantColor="muted" class="mt-0.5 mb-0">
+              University at Buffalo, Buffalo, NY
+            </Text>
           </div>
         </section>
 
         {/* Skills */}
-        <section class="mt-8 mb-12">
-          <Text variant="h2" class="border-b border-gray-200 pb-1 mb-0">
+        <section class="pt-8 pb-4 border-t border-gray-100">
+          <Text variant="h2" class="mb-4 border-b border-gray-200 pb-2">
             Skills
           </Text>
-          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Text variant="h4" class="mb-0">
-                Language &amp; Frameworks
+              <Text variant="h4" class="mb-1">
+                Languages &amp; Frameworks
               </Text>
-              <Text>
-                Javascript, Python, Typescript, Golang, PHP, React, React
+              <Text variant="serif">
+                JavaScript, Python, TypeScript, Golang, PHP, React, React
                 Native, Vue, Node.js, Express.js, Next.js, SQL
               </Text>
             </div>
             <div>
-              <Text variant="h4" class="mb-0">
-                Tools, Tech, Certs, &amp; Skills
+              <Text variant="h4" class="mb-1">
+                Tools, Tech &amp; Skills
               </Text>
-              <Text>
-                DataDog, AWS, Terraform, Checkouts, Payments, Conversions
-                optimizations, Accessibility, Observability, Testing,
-                Maintenance and refactoring, Software design and architecture
+              <Text variant="serif">
+                Datadog, AWS, Terraform, Payments, Checkout flows, Conversion
+                optimization, Accessibility, Observability, Testing, Software
+                design and architecture
               </Text>
             </div>
           </div>

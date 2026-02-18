@@ -7,11 +7,11 @@ import { cn } from "~/utils/styles";
 const textVariants = cva("text-foreground", {
   variants: {
     variant: {
-      default: "leading-relaxed md:leading-relaxed",
+      default: "font-poppins leading-relaxed md:leading-relaxed",
       headerCta: "text-6xl font-semibold tracking-tight font-merriweather",
       h1: "text-4xl font-extrabold tracking-tight lg:text-5xl font-merriweather",
       h2: "text-3xl font-semibold tracking-tight font-merriweather",
-      h3: "text-2xl font-semibold tracking-tight font-merriweather",
+      h3: "text-xl font-semibold tracking-tight font-merriweather",
       h4: "text-xl font-semibold tracking-tight font-merriweather",
       large: "text-lg font-semibold font-merriweather",
       small: "text-sm font-medium leading-6 font-poppins",
