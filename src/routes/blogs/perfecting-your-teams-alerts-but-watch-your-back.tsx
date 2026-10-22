@@ -62,7 +62,7 @@ export default function CssGridArticle() {
             measure and monitor their performance. For example, Stripe Payment
             Links may have the following steps for the P0 JTBD, Checkout:
           </Text>
-          <ol class="list-decimal pl-5 space-y-2 marker:text-blue-500">
+          <ol class="list-decimal pl-5 space-y-2 marker:text-muted marker:font-mono marker:text-sm">
             <li>
               <Text as="span" variant="serif">
                 Load Page API
@@ -130,7 +130,7 @@ export default function CssGridArticle() {
             Each step can usually be roughly broken down into the following
             metrics, which we’ll turn into SLOs.
           </Text>
-          <ol class="list-decimal pl-5 space-y-2 marker:text-blue-500">
+          <ol class="list-decimal pl-5 space-y-2 marker:text-muted marker:font-mono marker:text-sm">
             <li>
               <Text as="span" variant="serif">
                 Success rate

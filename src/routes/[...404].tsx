@@ -2,18 +2,19 @@
 import { Title } from "@solidjs/meta";
 import { A } from "@solidjs/router";
 import { createSignal, onMount, onCleanup, Show } from "solid-js";
-import { Text } from "~/components/ui/Text";
+import { MarginRow, Page } from "~/components/ui/Layout";
 
 export default function NotFound() {
   // game state
   const GAME_DURATION = 30; // seconds
-  const HAMMER_SIZE = 40; // px – approximate
+  const HAMMER_SIZE = 48; // px – approximate
 
   const [score, setScore] = createSignal(0);
   const [timeLeft, setTimeLeft] = createSignal(GAME_DURATION);
   const [playing, setPlaying] = createSignal(true);
   const [position, setPosition] = createSignal({ x: 0, y: 0 });
   let containerRef: HTMLDivElement | undefined;
+  let timer: ReturnType<typeof setInterval> | undefined;
 
   function randomizePosition() {
     if (!containerRef) return;
@@ -26,9 +27,13 @@ export default function NotFound() {
     });
   }
 
-  onMount(() => {
+  function startGame() {
+    clearInterval(timer);
+    setScore(0);
+    setTimeLeft(GAME_DURATION);
+    setPlaying(true);
     randomizePosition();
-    const timer = setInterval(() => {
+    timer = setInterval(() => {
       setTimeLeft((t) => {
         if (t <= 1) {
           clearInterval(timer);
@@ -38,67 +43,80 @@ export default function NotFound() {
         return t - 1;
       });
     }, 1000);
-    onCleanup(() => clearInterval(timer));
-  });
+  }
+
+  onMount(startGame);
+  onCleanup(() => clearInterval(timer));
 
   return (
     <>
       <Title>404 Not Found | Aaron Hammer</Title>
-      <main class="text-center mx-auto text-gray-700 p-4">
-        <Text variant="h1" class="mb-4">
-          Oops! Not Found
-        </Text>
-        <Text variant="h4" variantColor="secondary" class="mb-4">
-          But while you're here, click some hammers 🔨
-        </Text>
+      <Page>
+        <header class="mb-12">
+          <MarginRow aside="404">
+            <h1 class="font-serif text-[2.625rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink md:text-[3.5rem]">
+              Nothing here.
+            </h1>
+            <p class="mt-4 text-lg text-ink-soft">
+              That page doesn't exist. While you're here, whack some hammers,
+              or head back to the{" "}
+              <A
+                href="/"
+                class="text-ink underline decoration-accent/50 underline-offset-4 hover:decoration-accent"
+              >
+                resume
+              </A>
+              .
+            </p>
+          </MarginRow>
+        </header>
 
-        {/* Scoreboard */}
-        <Text variant="h3">
-          Time Left: {timeLeft()}s | Score: {score()}
-        </Text>
-
-        {/* Game area */}
-        <div
-          ref={containerRef}
-          class="relative mx-auto mt-6 w-full max-w-lg h-72 bg-white/60 backdrop-blur-sm rounded-lg shadow-lg border border-sky-200 overflow-hidden"
-        >
-          {/* Star */}
-          <Show when={playing()}>
-            <div
-              class="absolute cursor-pointer select-none text-5xl transition-transform duration-150 active:scale-125"
-              style={{ top: `${position().y}px`, left: `${position().x}px` }}
-              onClick={() => {
-                if (!playing()) return;
-                setScore((s) => s + 1);
-                randomizePosition();
-              }}
-            >
-              🔨
+        <MarginRow
+          class="md:items-start"
+          aside={
+            <div class="space-y-1 tabular-nums">
+              <div>Time {timeLeft()}s</div>
+              <div class="text-ink">Score {score()}</div>
             </div>
-          </Show>
-        </div>
-
-        {/* Game over & actions */}
-        <Show when={!playing()}>
-          <Text variant="h4">
-            Game Over! You smashed {score()} hammer{score() === 1 ? "" : "s"}.
-          </Text>
-          <button
-            class="mt-2 bg-sky-600 text-white px-4 py-2 rounded hover:bg-sky-700"
-            onClick={() => window.location.reload()}
+          }
+        >
+          <div
+            ref={containerRef}
+            class="relative h-72 w-full overflow-hidden border border-dashed border-rule bg-white/40"
           >
-            Play Again
-          </button>
-        </Show>
-
-        {/* Links */}
-        <Text variant="h4" class="mt-4">
-          <A href="/" class="text-sky-600 hover:underline">
-            Home
-          </A>{" "}
-          - 404 Not Found
-        </Text>
-      </main>
+            <Show
+              when={playing()}
+              fallback={
+                <div class="flex h-full flex-col items-center justify-center gap-3 text-center">
+                  <p class="text-lg text-ink">
+                    You smashed {score()} hammer{score() === 1 ? "" : "s"}.
+                  </p>
+                  <button
+                    type="button"
+                    class="cursor-pointer border border-ink px-4 py-1.5 font-mono text-[0.8125rem] text-ink transition-colors hover:bg-ink hover:text-paper"
+                    onClick={startGame}
+                  >
+                    Play again
+                  </button>
+                </div>
+              }
+            >
+              <button
+                type="button"
+                aria-label="Hammer"
+                class="absolute cursor-pointer select-none text-5xl leading-none transition-transform duration-150 active:scale-125"
+                style={{ top: `${position().y}px`, left: `${position().x}px` }}
+                onClick={() => {
+                  setScore((s) => s + 1);
+                  randomizePosition();
+                }}
+              >
+                🔨
+              </button>
+            </Show>
+          </div>
+        </MarginRow>
+      </Page>
     </>
   );
 }
