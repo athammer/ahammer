@@ -1,8 +1,7 @@
-// @ts-ignore - provided by runtime
-import { Title } from "@solidjs/meta";
 import { A } from "@solidjs/router";
 import { createSignal, onMount, For, Show } from "solid-js";
 import { MarginRow, Page } from "~/components/ui/Layout";
+import Seo from "~/components/ui/Seo";
 import { blogs, type Blog } from "~/data/blogs";
 
 type BlogWithViews = Blog & { viewCount: number; loading: boolean };
@@ -55,10 +54,10 @@ export default function BlogsList() {
 
   return (
     <>
-      <Title>Blog | Aaron Hammer</Title>
-      <meta
-        name="description"
-        content="Technical blog posts by Aaron Hammer on software engineering, full stack development, alerts, observability, and building scalable systems."
+      <Seo
+        title="Blog | Aaron Hammer"
+        description="Writing by Aaron Hammer on software engineering, payments, alerting, observability, and building products."
+        path="/blogs"
       />
       <Page>
         <header class="mb-14 md:mb-16">

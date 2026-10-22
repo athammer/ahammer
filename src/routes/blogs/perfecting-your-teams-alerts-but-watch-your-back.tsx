@@ -4,11 +4,8 @@ import BlogLayout from "~/components/ui/BlogLayout";
 export default function CssGridArticle() {
   return (
     <>
-      <meta
-        name="description"
-        content="Learn how to create effective alerting strategies for your engineering team. Tips on measuring user impact, setting up actionable alerts, and maintaining reliability from a Square engineer."
-      />
       <BlogLayout
+        description="Learn how to create effective alerting strategies for your engineering team. Tips on measuring user impact, setting up actionable alerts, and maintaining reliability from a Square engineer."
         title="Perfecting Alerts: Save Money, Sleep Better, and Watch Your Back"
         date="July 16, 2025"
         lastEdited="Dec 3, 2025"
