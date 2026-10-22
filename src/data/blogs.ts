@@ -4,6 +4,8 @@ export type Blog = {
   title: string;
   year: number;
   visitors: number;
+  // Unwritten posts stay listed but aren't linked or picked at random
+  draft?: boolean;
   // Author provides full article via a SolidJS component file in `src/blogArticles/{slug}.tsx`
 };
 
@@ -21,6 +23,7 @@ export const blogs: Blog[] = [
     title: "How not to pitch a $100b product to your company",
     year: 2026,
     visitors: 0,
+    draft: true,
   },
   {
     id: 2,
@@ -28,5 +31,8 @@ export const blogs: Blog[] = [
     title: "Stripe's APIs are a dead end design, and they're perfect",
     year: 2026,
     visitors: 0,
+    draft: true,
   },
 ];
+
+export const publishedBlogs = blogs.filter((blog) => !blog.draft);

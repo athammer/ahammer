@@ -4,30 +4,28 @@ import { Dynamic } from "solid-js/web";
 import { BaseUIProps } from "~/types/utils";
 import { cn } from "~/utils/styles";
 
-const textVariants = cva("text-foreground", {
+const textVariants = cva("", {
   variants: {
     variant: {
-      default: "font-poppins leading-relaxed md:leading-relaxed",
-      headerCta: "text-6xl font-semibold tracking-tight font-merriweather",
-      h1: "text-4xl font-extrabold tracking-tight lg:text-5xl font-merriweather",
-      h2: "text-3xl font-semibold tracking-tight font-merriweather",
-      h3: "text-xl font-semibold tracking-tight font-merriweather",
-      h4: "text-xl font-semibold tracking-tight font-merriweather",
-      large: "text-lg font-semibold font-merriweather",
-      small: "text-sm font-medium leading-6 font-poppins",
-      serif: "font-poppins text-base leading-relaxed text-slate-700",
+      default: "font-serif text-[1.0625rem] leading-[1.7] text-ink-soft",
+      h1: "font-serif text-4xl md:text-[2.75rem] font-medium tracking-[-0.015em] leading-[1.1] text-ink text-balance",
+      h2: "font-serif text-[1.625rem] font-semibold tracking-[-0.01em] leading-tight text-ink",
+      h3: "font-serif text-xl font-semibold leading-snug text-ink",
+      h4: "font-serif text-lg font-semibold italic leading-snug text-ink",
+      large: "font-serif text-lg font-semibold text-ink",
+      small: "font-mono text-[0.8125rem] leading-6 text-muted",
+      serif: "font-serif text-[1.0625rem] leading-[1.7] text-ink-soft",
     },
     variantColor: {
-      default: "text-gray-900",
-      link: "text-blue-600 hover:underline",
-      primary: "text-blue-600",
-      secondary: "text-gray-600",
-      muted: "text-gray-500",
+      default: "text-ink",
+      link: "text-ink underline decoration-accent/50 underline-offset-[3px] hover:decoration-accent",
+      primary: "text-accent",
+      secondary: "text-ink-soft",
+      muted: "text-muted",
     },
   },
   defaultVariants: {
     variant: "default",
-    variantColor: "default",
   },
 });
 
@@ -65,11 +63,11 @@ export const Text: Component<TextProps> = (props) => {
       component={component}
       {...rest}
       class={cn(
-        local.class,
         textVariants({
           variant: local.variant,
           variantColor: local.variantColor,
-        })
+        }),
+        local.class
       )}
     />
   );
@@ -77,12 +75,5 @@ export const Text: Component<TextProps> = (props) => {
 
 type TextLinkProps = TextProps & JSX.AnchorHTMLAttributes<HTMLAnchorElement>;
 export const TextLink: Component<TextLinkProps> = (props) => {
-  return (
-    <Text
-      as="a"
-      variantColor="link"
-      class={cn(props.class, "hover:underline leading-inherit")}
-      {...props}
-    />
-  );
+  return <Text as="a" variantColor="link" {...props} />;
 };

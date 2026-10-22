@@ -8,6 +8,7 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#f7f4ef" />
           <meta
             name="description"
             content="Aaron Hammer - Full Stack Software Engineer, Founder, and Builder. Experienced in React, TypeScript, Golang, and building scalable web applications. Based in Stamford, CT."
@@ -54,7 +55,7 @@ export default createHandler(() => (
             crossorigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap"
             rel="stylesheet"
           />
           {assets}
