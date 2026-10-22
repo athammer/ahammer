@@ -9,16 +9,14 @@ import {
 } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { ExternalArrow, MarginRow, Page } from "~/components/ui/Layout";
-import { publishedBlogs } from "~/data/blogs";
-// @ts-ignore - provided by runtime
-import { Title } from "@solidjs/meta";
-
-const SITE_URL = "https://ahammer.dev";
+import Seo, { isoDate, PERSON_ID, SITE_URL } from "~/components/ui/Seo";
+import { blogs, publishedBlogs } from "~/data/blogs";
 
 // Article page laid out on the same margin grid as the resume.
 const BlogLayout: Component<{
   children: JSX.Element;
   title: string;
+  description?: string;
   date: string;
   lastEdited?: string;
   id: number;
@@ -33,8 +31,13 @@ const BlogLayout: Component<{
   let bodyRef: HTMLDivElement | undefined;
   let copiedTimer: ReturnType<typeof setTimeout> | undefined;
 
+  const blog = () => blogs.find((b) => b.id === props.id);
   const shareUrl = () => SITE_URL + location.pathname;
   const morePosts = () => publishedBlogs.filter((blog) => blog.id !== props.id);
+  const description = () =>
+    props.description ?? `${props.title}, a post by Aaron Hammer.`;
+  const published = () => isoDate(props.date);
+  const modified = () => isoDate(props.lastEdited) ?? published();
 
   const handleScroll = () => {
     if (!articleRef) return;
@@ -122,7 +125,36 @@ const BlogLayout: Component<{
 
   return (
     <>
-      <Title>{props.title + " | Aaron Hammer"}</Title>
+      <Seo
+        title={`${props.title} | Aaron Hammer`}
+        description={description()}
+        path={location.pathname}
+        type="article"
+        noindex={blog()?.draft}
+        publishedTime={published()}
+        modifiedTime={modified()}
+      />
+      <Show when={!blog()?.draft}>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: props.title,
+            description: description(),
+            url: shareUrl(),
+            mainEntityOfPage: shareUrl(),
+            datePublished: published(),
+            dateModified: modified(),
+            author: {
+              "@type": "Person",
+              "@id": PERSON_ID,
+              name: "Aaron Hammer",
+              url: SITE_URL,
+            },
+            publisher: { "@id": PERSON_ID },
+          })}
+        </script>
+      </Show>
 
       {/* Reading progress */}
       <div

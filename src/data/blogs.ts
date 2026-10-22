@@ -4,7 +4,9 @@ export type Blog = {
   title: string;
   year: number;
   visitors: number;
-  // Unwritten posts stay listed but aren't linked or picked at random
+  // ISO date of the last meaningful edit, used for the sitemap's lastmod
+  updated?: string;
+  // Unwritten posts stay listed but aren't linked, indexed, or picked at random
   draft?: boolean;
   // Author provides full article via a SolidJS component file in `src/blogArticles/{slug}.tsx`
 };
@@ -16,6 +18,7 @@ export const blogs: Blog[] = [
     title: "Perfecting your team's alerts, but watch your back",
     year: 2025,
     visitors: 0,
+    updated: "2025-12-03",
   },
   {
     id: 1,

@@ -14,8 +14,7 @@ import {
   projects,
   skills,
 } from "~/data/resume";
-// @ts-ignore - provided by runtime
-import { Title } from "@solidjs/meta";
+import Seo, { OG_IMAGE, PERSON_ID, SITE_NAME, SITE_URL } from "~/components/ui/Seo";
 
 const Dates = (props: { start: string; end: string }) => (
   <span class="whitespace-nowrap">
@@ -24,6 +23,77 @@ const Dates = (props: { start: string; end: string }) => (
 );
 
 const hostname = (url: string) => new URL(url).hostname;
+
+// Person + profile page + website, linked by @id, so search engines can tie
+// "Aaron Hammer" to this site and to the same person's other profiles.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      publisher: { "@id": PERSON_ID },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/#profile`,
+      url: SITE_URL,
+      name: "Aaron Hammer | Senior Full Stack Engineer",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      mainEntity: { "@id": PERSON_ID },
+    },
+    {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: "Aaron Hammer",
+      alternateName: "Aaron Taylor Hammer",
+      givenName: "Aaron",
+      additionalName: "Taylor",
+      familyName: "Hammer",
+      url: SITE_URL,
+      image: OG_IMAGE,
+      email: `mailto:${contact.email}`,
+      jobTitle: "Senior Full Stack Software Engineer",
+      worksFor: {
+        "@type": "Organization",
+        name: "Square",
+        url: "https://squareup.com",
+        parentOrganization: {
+          "@type": "Organization",
+          name: "Block, Inc.",
+          url: "https://block.xyz",
+        },
+      },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: education.school,
+        url: "https://www.buffalo.edu",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Stamford",
+        addressRegion: "CT",
+        addressCountry: "US",
+      },
+      sameAs: [
+        ...contact.links.map((link) => link.href),
+        "https://twitter.com/ahammer__",
+      ],
+      knowsAbout: [
+        "Payments",
+        "Checkout",
+        "Full Stack Development",
+        "TypeScript",
+        "React",
+        "Golang",
+        "Observability",
+        "Accessibility",
+      ],
+    },
+  ],
+};
 
 export default function Home() {
   const navigate = useNavigate();
@@ -42,46 +112,13 @@ export default function Home() {
 
   return (
     <>
-      <Title>Aaron Hammer | Full Stack Engineer</Title>
-
-      {/* Structured Data for SEO */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Aaron Taylor Hammer",
-          alternateName: "Aaron Hammer",
-          url: "https://ahammer.dev",
-          image: "https://ahammer.dev/favicon.ico",
-          jobTitle: "Senior Full Stack Software Engineer",
-          worksFor: {
-            "@type": "Organization",
-            name: "Square / Block",
-          },
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Stamford",
-            addressRegion: "CT",
-            addressCountry: "US",
-          },
-          email: "aaron@athammer.me",
-          sameAs: [
-            "https://linkedin.com/in/athammer",
-            "https://github.com/athammer",
-            "https://twitter.com/ahammer__",
-          ],
-          knowsAbout: [
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Golang",
-            "PHP",
-            "Full Stack Development",
-            "Web Development",
-            "Software Engineering",
-          ],
-        })}
-      </script>
+      <Seo
+        title="Aaron Hammer | Senior Full Stack Engineer"
+        description="Aaron Hammer is a senior full stack software engineer at Square / Block in Stamford, CT, working on checkout and payments. Resume, projects, and writing."
+        path="/"
+        type="profile"
+      />
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
 
       <Page class="print:p-0">
         <header class="mb-16 md:mb-20 print:mb-8">

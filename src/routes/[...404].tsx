@@ -1,8 +1,8 @@
-// @ts-ignore - provided by runtime
-import { Title } from "@solidjs/meta";
 import { A } from "@solidjs/router";
+import { HttpStatusCode } from "@solidjs/start";
 import { createSignal, onMount, onCleanup, Show } from "solid-js";
 import { MarginRow, Page } from "~/components/ui/Layout";
+import Seo from "~/components/ui/Seo";
 
 export default function NotFound() {
   // game state
@@ -50,7 +50,12 @@ export default function NotFound() {
 
   return (
     <>
-      <Title>404 Not Found | Aaron Hammer</Title>
+      <HttpStatusCode code={404} />
+      <Seo
+        title="404 Not Found | Aaron Hammer"
+        description="This page doesn't exist."
+        noindex
+      />
       <Page>
         <header class="mb-12">
           <MarginRow aside="404">
